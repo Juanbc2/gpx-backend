@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "eventId": 1,
+    "categoriesIds": [1, 2, 3],
+    "details": "string",
+    "stageDate": "2022-12-27 08:26:49.219717",
+    "waypoints": [
+      {
+        "wpnumber": 1,
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "type": "START",
+        "distance": 0,
+        "speed": 0,
+        "penalization": "2022-12-27 08:26:49.219717",
+        "ratius": 50
+      },
+      {
+        "wpnumber": 5,
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "type": "WPM",
+        "distance": 5.6,
+        "speed": 0,
+        "penalization": "2022-12-27 08:26:49.219717",
+        "ratius": 50
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "eventId": 1,
+    "categoriesIds": [4, 5, 6],
+    "details": "string",
+    "stageDate": "2022-12-27 08:26:49.219717",
+    "waypoints": [
+      {
+        "wpnumber": 1,
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "type": "START",
+        "distance": 0,
+        "speed": 0,
+        "penalization": "2022-12-27 08:26:49.219717",
+        "ratius": 50
+      },
+      {
+        "wpnumber": 5,
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "type": "WPM",
+        "distance": 5.6,
+        "speed": 0,
+        "penalization": "2022-12-27 08:26:49.219717",
+        "ratius": 50
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "evento1",
+    "localization": "Darien",
+    "details": "string",
+    "eventStartDate": "2022-12-27 08:26:49.219717",
+    "eventEndDate": "2022-12-27 08:26:49.219717",
+    "stagesIds": [1, 2],
+    "categoryIds": [1, 2, 3]
+  },
+  {
+    "id": 2,
+    "name": "evento2",
+    "localization": "Darien",
+    "details": "string",
+    "eventStartDate": "2022-12-27 08:26:49.219717",
+    "eventEndDate": "2022-12-27 08:26:49.219717",
+    "stagesIds": [3, 4],
+    "categoryIds": [1, 2, 3, 4]
+  }
+]
