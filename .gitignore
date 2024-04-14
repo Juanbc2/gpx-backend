@@ -1,3 +1,5 @@
 __pycache__/
 
 
+data/eventsData.json
+data/stagesData.json
