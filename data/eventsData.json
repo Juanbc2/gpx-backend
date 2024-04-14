@@ -1,22 +1,43 @@
 [
-  {
-    "id": 1,
-    "name": "evento1",
-    "localization": "Darien",
-    "details": "string",
-    "eventStartDate": "2022-12-27 08:26:49.219717",
-    "eventEndDate": "2022-12-27 08:26:49.219717",
-    "stagesIds": [1, 2],
-    "categoryIds": [1, 2, 3]
-  },
-  {
-    "id": 2,
-    "name": "evento2",
-    "localization": "Darien",
-    "details": "string",
-    "eventStartDate": "2022-12-27 08:26:49.219717",
-    "eventEndDate": "2022-12-27 08:26:49.219717",
-    "stagesIds": [3, 4],
-    "categoryIds": [1, 2, 3, 4]
-  }
+    {
+        "id": "4c8ce2a1-2e25-4ada-ba84-b87177098585",
+        "name": "Darien Grand Prix",
+        "location": "Darien Monta\u00f1a Sur",
+        "details": "Carrera de longitud extensa de Darien Rally",
+        "eventStartDate": "2024-01-01",
+        "eventEndDate": "2024-01-31",
+        "stagesIds": [],
+        "categoryIds": [
+            1,
+            2,
+            8
+        ]
+    },
+    {
+        "id": "3a0b3791-063c-4818-8478-e72e4ed6d2bb",
+        "name": "Darien Ben\u00e9fico",
+        "location": "Darien pista ol\u00edmpica",
+        "details": "Beneficio fundaci\u00f3n corremos",
+        "eventStartDate": "2024-01-01",
+        "eventEndDate": "2024-12-30",
+        "stagesIds": [],
+        "categoryIds": [
+            7
+        ]
+    },
+    {
+        "id": "8b1330b3-6205-400c-96c3-4d9fbab6123a",
+        "name": "Carrera por la villa",
+        "location": "Darien Villa Norte",
+        "details": "Villanorte Sendero la cristalina",
+        "eventStartDate": "2024-07-17",
+        "eventEndDate": "2024-10-01",
+        "stagesIds": [],
+        "categoryIds": [
+            3,
+            4,
+            5,
+            6
+        ]
+    }
 ]

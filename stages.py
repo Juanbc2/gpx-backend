@@ -18,7 +18,7 @@ class Waypoint(BaseModel):
     type: Text
     distance: float
     speed: float
-    penalization: datetime
+    penalization: str
     ratius: int
 
 # stage model
@@ -27,9 +27,8 @@ class Stage(BaseModel):
     eventId: str
     categoriesIds: list
     details: str
-    stageDate: datetime
+    stageDate: str
     waypoints: Waypoint
-    created_at: Optional[datetime] = datetime.now()
 
 
 @router.get("/stages",tags=["stages"])

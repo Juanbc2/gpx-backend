@@ -1,32 +1,30 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Optional
-from datetime import datetime
-from uuid import uuid4 as uuid
+import uuid
 import json
 
 router = APIRouter()
-
-f = open("./data/eventsData.json")
-json_data = json.load(f)
-events = json_data
+events = []
+try:
+    with open('./data/eventsData.json', 'r') as f:
+        json_data = json.load(f)
+        if json_data:
+            events = json_data
+except (FileNotFoundError, json.JSONDecodeError):
+    events = []
 
 # event model
 class Event(BaseModel):
-    id: Optional[str] = str(uuid())
+    id: Optional[str] = None
     name: str
     location: str
-    eventStartDate: datetime
-    eventEndDate: datetime
-    stagesIds: list
+    details: Optional[str] = None
+    eventStartDate: str
+    eventEndDate: str
+    stagesIds: Optional[list] = []
     categoryIds: list
-    created_at: Optional[datetime] = datetime.now()
 
-
-
-# @app.get("/")
-# def read_root():
-#     return {"welcome": "my first fastapi"}
 
 @router.get("/events",tags=["events"])
 def get_events():
@@ -41,5 +39,21 @@ def get_event(event_id: str):
 
 @router.post("/events",tags=["events"])
 def add_event(event: Event):
-    events.append(event)
+    event.id = str(uuid.uuid4())
+    event_dict = event.model_dump()
+    events.append(event_dict) 
+
+    with open('./data/eventsData.json', 'w') as f:
+        json.dump(events, f,indent=4)
+
     return events
+
+@router.delete("/events/{event_id}",tags=["events"])
+def delete_event(event_id: str):
+    for event in events:
+        if str(event["id"]) == event_id:
+            events.remove(event)
+            with open('./data/eventsData.json', 'w') as f:
+                json.dump(events, f,indent=4)
+            return events
+    raise HTTPException(status_code=404, detail="Post not found")
