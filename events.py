@@ -22,8 +22,8 @@ class Event(BaseModel):
     details: Optional[str] = None
     eventStartDate: str
     eventEndDate: str
-    stagesIds: Optional[list] = []
-    categoryIds: list
+    stagesIds: Optional[list] = [int]
+    categoryIds: list[int]
 
 
 @router.get("/events",tags=["events"])
@@ -42,10 +42,8 @@ def add_event(event: Event):
     event.id = str(uuid.uuid4())
     event_dict = event.model_dump()
     events.append(event_dict) 
-
     with open('./data/eventsData.json', 'w') as f:
         json.dump(events, f,indent=4)
-
     return events
 
 @router.delete("/events/{event_id}",tags=["events"])
@@ -56,4 +54,4 @@ def delete_event(event_id: str):
             with open('./data/eventsData.json', 'w') as f:
                 json.dump(events, f,indent=4)
             return events
-    raise HTTPException(status_code=404, detail="Post not found")
+    raise HTTPException(status_code=404, detail="event not found")

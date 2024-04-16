@@ -1,60 +1,3043 @@
 [
-  {
-    "id": 1,
-    "eventId": 1,
-    "categoriesIds": [1, 2, 3],
-    "details": "string",
-    "stageDate": "2022-12-27 08:26:49.219717",
-    "waypoints": [
-      {
-        "wpnumber": 1,
-        "latitude": 37.7749,
-        "longitude": -122.4194,
-        "type": "START",
-        "distance": 0,
-        "speed": 0,
-        "penalization": "2022-12-27 08:26:49.219717",
-        "ratius": 50
-      },
-      {
-        "wpnumber": 5,
-        "latitude": 37.7749,
-        "longitude": -122.4194,
-        "type": "WPM",
-        "distance": 5.6,
-        "speed": 0,
-        "penalization": "2022-12-27 08:26:49.219717",
-        "ratius": 50
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "eventId": 1,
-    "categoriesIds": [4, 5, 6],
-    "details": "string",
-    "stageDate": "2022-12-27 08:26:49.219717",
-    "waypoints": [
-      {
-        "wpnumber": 1,
-        "latitude": 37.7749,
-        "longitude": -122.4194,
-        "type": "START",
-        "distance": 0,
-        "speed": 0,
-        "penalization": "2022-12-27 08:26:49.219717",
-        "ratius": 50
-      },
-      {
-        "wpnumber": 5,
-        "latitude": 37.7749,
-        "longitude": -122.4194,
-        "type": "WPM",
-        "distance": 5.6,
-        "speed": 0,
-        "penalization": "2022-12-27 08:26:49.219717",
-        "ratius": 50
-      }
-    ]
-  }
+    {
+        "id": "23f4fd08-3d76-42c8-ba57-3b0eb7af7d35",
+        "eventId": "3a0b3791-063c-4818-8478-e72e4ed6d2bb",
+        "categoriesIds": [
+            7
+        ],
+        "details": "etapa inicial",
+        "stageDate": "2024-04-02",
+        "waypoints": [
+            {
+                "wpnumber": 1,
+                "latitude": "004\u00b007.535,N",
+                "longitude": "073\u00b034.422,W",
+                "type": "START",
+                "distance": 0.0,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 2,
+                "latitude": "004\u00b007.994,N",
+                "longitude": "073\u00b033.922,W",
+                "type": null,
+                "distance": 1.32,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 3,
+                "latitude": "004\u00b007.279,N",
+                "longitude": "073\u00b030.347,W",
+                "type": null,
+                "distance": 8.12,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 4,
+                "latitude": "004\u00b007.312,N",
+                "longitude": "073\u00b027.634,W",
+                "type": null,
+                "distance": 13.33,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 5,
+                "latitude": "004\u00b007.233,N",
+                "longitude": "073\u00b027.461,W",
+                "type": null,
+                "distance": 13.69,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 6,
+                "latitude": "004\u00b007.517,N",
+                "longitude": "073\u00b019.740,W",
+                "type": null,
+                "distance": 28.33,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 7,
+                "latitude": "004\u00b007.702,N",
+                "longitude": "073\u00b017.455,W",
+                "type": null,
+                "distance": 32.59,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 8,
+                "latitude": "004\u00b007.521,N",
+                "longitude": "073\u00b016.681,W",
+                "type": null,
+                "distance": 34.18,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 9,
+                "latitude": "004\u00b007.562,N",
+                "longitude": "073\u00b016.542,W",
+                "type": "WPM",
+                "distance": 34.45,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 10,
+                "latitude": "004\u00b007.514,N",
+                "longitude": "073\u00b016.458,W",
+                "type": null,
+                "distance": 34.66,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 11,
+                "latitude": "004\u00b007.180,N",
+                "longitude": "073\u00b016.306,W",
+                "type": null,
+                "distance": 35.34,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 12,
+                "latitude": "004\u00b007.773,N",
+                "longitude": "073\u00b013.888,W",
+                "type": null,
+                "distance": 40.1,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 13,
+                "latitude": "004\u00b007.764,N",
+                "longitude": "073\u00b013.434,W",
+                "type": "DZ",
+                "distance": 40.95,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 14,
+                "latitude": "004\u00b007.826,N",
+                "longitude": "073\u00b013.216,W",
+                "type": "FZ",
+                "distance": 41.37,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 15,
+                "latitude": "004\u00b007.884,N",
+                "longitude": "073\u00b012.387,W",
+                "type": null,
+                "distance": 42.93,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 16,
+                "latitude": "004\u00b007.970,N",
+                "longitude": "073\u00b011.966,W",
+                "type": null,
+                "distance": 43.73,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 17,
+                "latitude": "004\u00b007.848,N",
+                "longitude": "073\u00b011.510,W",
+                "type": null,
+                "distance": 44.64,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 18,
+                "latitude": "004\u00b007.867,N",
+                "longitude": "073\u00b009.656,W",
+                "type": "DZ",
+                "distance": 48.08,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 19,
+                "latitude": "004\u00b007.670,N",
+                "longitude": "073\u00b009.209,W",
+                "type": "FZ",
+                "distance": 49.03,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 20,
+                "latitude": "004\u00b008.198,N",
+                "longitude": "073\u00b005.220,W",
+                "type": "WPM",
+                "distance": 56.73,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 21,
+                "latitude": "004\u00b008.001,N",
+                "longitude": "073\u00b005.124,W",
+                "type": null,
+                "distance": 57.14,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 22,
+                "latitude": "004\u00b007.390,N",
+                "longitude": "073\u00b004.833,W",
+                "type": null,
+                "distance": 58.39,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 23,
+                "latitude": "004\u00b007.116,N",
+                "longitude": "073\u00b004.713,W",
+                "type": null,
+                "distance": 58.95,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 24,
+                "latitude": "004\u00b006.813,N",
+                "longitude": "073\u00b004.718,W",
+                "type": null,
+                "distance": 59.52,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 25,
+                "latitude": "004\u00b006.714,N",
+                "longitude": "073\u00b004.742,W",
+                "type": null,
+                "distance": 59.71,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 26,
+                "latitude": "004\u00b006.553,N",
+                "longitude": "073\u00b004.769,W",
+                "type": null,
+                "distance": 60.01,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 27,
+                "latitude": "004\u00b005.408,N",
+                "longitude": "073\u00b004.660,W",
+                "type": null,
+                "distance": 62.15,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 28,
+                "latitude": "004\u00b005.268,N",
+                "longitude": "073\u00b004.652,W",
+                "type": null,
+                "distance": 62.41,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 29,
+                "latitude": "004\u00b005.102,N",
+                "longitude": "073\u00b004.624,W",
+                "type": null,
+                "distance": 62.73,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 30,
+                "latitude": "004\u00b004.531,N",
+                "longitude": "073\u00b004.616,W",
+                "type": null,
+                "distance": 63.79,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 31,
+                "latitude": "004\u00b003.770,N",
+                "longitude": "073\u00b003.268,W",
+                "type": "DZ",
+                "distance": 66.98,
+                "speed": 60.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 32,
+                "latitude": "004\u00b003.454,N",
+                "longitude": "073\u00b003.057,W",
+                "type": null,
+                "distance": 67.73,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 33,
+                "latitude": "004\u00b003.363,N",
+                "longitude": "073\u00b002.919,W",
+                "type": null,
+                "distance": 68.04,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 34,
+                "latitude": "004\u00b003.342,N",
+                "longitude": "073\u00b002.860,W",
+                "type": "FZ",
+                "distance": 68.15,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 35,
+                "latitude": "004\u00b004.423,N",
+                "longitude": "072\u00b059.221,W",
+                "type": null,
+                "distance": 75.38,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 36,
+                "latitude": "004\u00b004.378,N",
+                "longitude": "072\u00b059.177,W",
+                "type": null,
+                "distance": 75.49,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 37,
+                "latitude": "004\u00b004.416,N",
+                "longitude": "072\u00b059.016,W",
+                "type": null,
+                "distance": 75.83,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 38,
+                "latitude": "004\u00b004.863,N",
+                "longitude": "072\u00b058.196,W",
+                "type": "DZ",
+                "distance": 77.56,
+                "speed": 60.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 39,
+                "latitude": "004\u00b005.017,N",
+                "longitude": "072\u00b057.914,W",
+                "type": null,
+                "distance": 78.15,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 40,
+                "latitude": "004\u00b005.055,N",
+                "longitude": "072\u00b057.827,W",
+                "type": null,
+                "distance": 78.33,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 41,
+                "latitude": "004\u00b005.595,N",
+                "longitude": "072\u00b057.192,W",
+                "type": null,
+                "distance": 79.88,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 42,
+                "latitude": "004\u00b005.764,N",
+                "longitude": "072\u00b056.906,W",
+                "type": "FZ",
+                "distance": 80.5,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 43,
+                "latitude": "004\u00b006.122,N",
+                "longitude": "072\u00b056.234,W",
+                "type": null,
+                "distance": 81.95,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 44,
+                "latitude": "004\u00b006.210,N",
+                "longitude": "072\u00b056.168,W",
+                "type": "DZ",
+                "distance": 82.15,
+                "speed": 60.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 45,
+                "latitude": "004\u00b006.258,N",
+                "longitude": "072\u00b055.736,W",
+                "type": null,
+                "distance": 83.0,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 46,
+                "latitude": "004\u00b006.173,N",
+                "longitude": "072\u00b055.101,W",
+                "type": null,
+                "distance": 84.19,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 47,
+                "latitude": "004\u00b005.996,N",
+                "longitude": "072\u00b054.511,W",
+                "type": null,
+                "distance": 85.68,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 48,
+                "latitude": "004\u00b006.348,N",
+                "longitude": "072\u00b053.403,W",
+                "type": null,
+                "distance": 88.03,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 49,
+                "latitude": "004\u00b006.310,N",
+                "longitude": "072\u00b052.855,W",
+                "type": null,
+                "distance": 89.04,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 50,
+                "latitude": "004\u00b006.181,N",
+                "longitude": "072\u00b052.792,W",
+                "type": "FZ",
+                "distance": 89.31,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 51,
+                "latitude": "004\u00b005.782,N",
+                "longitude": "072\u00b052.510,W",
+                "type": null,
+                "distance": 90.22,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 52,
+                "latitude": "004\u00b004.735,N",
+                "longitude": "072\u00b052.008,W",
+                "type": null,
+                "distance": 93.14,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 53,
+                "latitude": "004\u00b001.627,N",
+                "longitude": "072\u00b051.497,W",
+                "type": null,
+                "distance": 101.92,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 54,
+                "latitude": "004\u00b001.152,N",
+                "longitude": "072\u00b051.934,W",
+                "type": null,
+                "distance": 103.41,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 55,
+                "latitude": "004\u00b000.491,N",
+                "longitude": "072\u00b051.727,W",
+                "type": null,
+                "distance": 104.72,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 56,
+                "latitude": "003\u00b059.596,N",
+                "longitude": "072\u00b050.561,W",
+                "type": null,
+                "distance": 108.27,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 57,
+                "latitude": "003\u00b058.654,N",
+                "longitude": "072\u00b049.297,W",
+                "type": null,
+                "distance": 111.3,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 58,
+                "latitude": "003\u00b058.032,N",
+                "longitude": "072\u00b048.426,W",
+                "type": null,
+                "distance": 113.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 59,
+                "latitude": "003\u00b056.082,N",
+                "longitude": "072\u00b046.116,W",
+                "type": null,
+                "distance": 119.72,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 60,
+                "latitude": "003\u00b056.101,N",
+                "longitude": "072\u00b045.982,W",
+                "type": "WPM",
+                "distance": 119.98,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 61,
+                "latitude": "003\u00b055.861,N",
+                "longitude": "072\u00b045.616,W",
+                "type": "WPM",
+                "distance": 120.8,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 62,
+                "latitude": "003\u00b055.660,N",
+                "longitude": "072\u00b045.743,W",
+                "type": null,
+                "distance": 121.24,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 63,
+                "latitude": "003\u00b052.948,N",
+                "longitude": "072\u00b045.633,W",
+                "type": null,
+                "distance": 126.75,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 64,
+                "latitude": "003\u00b052.957,N",
+                "longitude": "072\u00b045.598,W",
+                "type": null,
+                "distance": 126.82,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 65,
+                "latitude": "003\u00b052.948,N",
+                "longitude": "072\u00b045.472,W",
+                "type": "WPM",
+                "distance": 127.08,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 66,
+                "latitude": "003\u00b052.856,N",
+                "longitude": "072\u00b045.512,W",
+                "type": null,
+                "distance": 127.27,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 67,
+                "latitude": "003\u00b052.592,N",
+                "longitude": "072\u00b045.200,W",
+                "type": "WPM",
+                "distance": 128.05,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 30
+            },
+            {
+                "wpnumber": 68,
+                "latitude": "003\u00b052.552,N",
+                "longitude": "072\u00b045.119,W",
+                "type": null,
+                "distance": 128.22,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 69,
+                "latitude": "003\u00b052.417,N",
+                "longitude": "072\u00b044.903,W",
+                "type": null,
+                "distance": 128.74,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 70,
+                "latitude": "003\u00b052.162,N",
+                "longitude": "072\u00b044.787,W",
+                "type": null,
+                "distance": 129.26,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 71,
+                "latitude": "003\u00b051.819,N",
+                "longitude": "072\u00b044.212,W",
+                "type": null,
+                "distance": 130.61,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 72,
+                "latitude": "003\u00b051.343,N",
+                "longitude": "072\u00b043.529,W",
+                "type": null,
+                "distance": 132.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 73,
+                "latitude": "003\u00b051.167,N",
+                "longitude": "072\u00b043.412,W",
+                "type": null,
+                "distance": 132.75,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 74,
+                "latitude": "003\u00b050.393,N",
+                "longitude": "072\u00b043.237,W",
+                "type": null,
+                "distance": 135.52,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 75,
+                "latitude": "003\u00b049.852,N",
+                "longitude": "072\u00b043.179,W",
+                "type": null,
+                "distance": 136.72,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 76,
+                "latitude": "003\u00b048.393,N",
+                "longitude": "072\u00b043.267,W",
+                "type": "DZ",
+                "distance": 139.69,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 77,
+                "latitude": "003\u00b048.312,N",
+                "longitude": "072\u00b043.291,W",
+                "type": null,
+                "distance": 139.85,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 78,
+                "latitude": "003\u00b048.189,N",
+                "longitude": "072\u00b043.405,W",
+                "type": "FZ",
+                "distance": 140.18,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 79,
+                "latitude": "003\u00b047.781,N",
+                "longitude": "072\u00b044.130,W",
+                "type": null,
+                "distance": 141.99,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 80,
+                "latitude": "003\u00b047.356,N",
+                "longitude": "072\u00b044.474,W",
+                "type": null,
+                "distance": 143.04,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 81,
+                "latitude": "003\u00b046.898,N",
+                "longitude": "072\u00b044.265,W",
+                "type": null,
+                "distance": 144.0,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 82,
+                "latitude": "003\u00b046.830,N",
+                "longitude": "072\u00b044.277,W",
+                "type": "WPM",
+                "distance": 144.13,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 83,
+                "latitude": "003\u00b046.810,N",
+                "longitude": "072\u00b044.156,W",
+                "type": null,
+                "distance": 144.36,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 84,
+                "latitude": "003\u00b046.798,N",
+                "longitude": "072\u00b044.122,W",
+                "type": null,
+                "distance": 144.43,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 85,
+                "latitude": "003\u00b046.801,N",
+                "longitude": "072\u00b044.079,W",
+                "type": null,
+                "distance": 144.5,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 86,
+                "latitude": "003\u00b046.887,N",
+                "longitude": "072\u00b044.016,W",
+                "type": "WPM",
+                "distance": 144.71,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 30
+            },
+            {
+                "wpnumber": 87,
+                "latitude": "003\u00b046.947,N",
+                "longitude": "072\u00b044.011,W",
+                "type": null,
+                "distance": 144.82,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 88,
+                "latitude": "003\u00b046.920,N",
+                "longitude": "072\u00b043.990,W",
+                "type": "WPM",
+                "distance": 144.9,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 30
+            },
+            {
+                "wpnumber": 89,
+                "latitude": "003\u00b046.791,N",
+                "longitude": "072\u00b043.991,W",
+                "type": null,
+                "distance": 145.15,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 90,
+                "latitude": "003\u00b046.541,N",
+                "longitude": "072\u00b043.726,W",
+                "type": null,
+                "distance": 145.91,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 91,
+                "latitude": "003\u00b045.975,N",
+                "longitude": "072\u00b043.508,W",
+                "type": null,
+                "distance": 147.16,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 92,
+                "latitude": "003\u00b045.767,N",
+                "longitude": "072\u00b043.407,W",
+                "type": null,
+                "distance": 147.6,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 93,
+                "latitude": "003\u00b045.448,N",
+                "longitude": "072\u00b043.289,W",
+                "type": null,
+                "distance": 148.24,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 94,
+                "latitude": "003\u00b043.842,N",
+                "longitude": "072\u00b042.331,W",
+                "type": null,
+                "distance": 152.28,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 95,
+                "latitude": "003\u00b043.265,N",
+                "longitude": "072\u00b042.182,W",
+                "type": null,
+                "distance": 153.41,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 96,
+                "latitude": "003\u00b042.382,N",
+                "longitude": "072\u00b042.528,W",
+                "type": null,
+                "distance": 155.45,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 97,
+                "latitude": "003\u00b042.223,N",
+                "longitude": "072\u00b042.510,W",
+                "type": null,
+                "distance": 155.81,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 98,
+                "latitude": "003\u00b042.292,N",
+                "longitude": "072\u00b040.376,W",
+                "type": null,
+                "distance": 161.34,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 99,
+                "latitude": "003\u00b042.423,N",
+                "longitude": "072\u00b040.239,W",
+                "type": "WPM",
+                "distance": 161.84,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 100,
+                "latitude": "003\u00b042.269,N",
+                "longitude": "072\u00b039.801,W",
+                "type": null,
+                "distance": 163.28,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 101,
+                "latitude": "003\u00b042.176,N",
+                "longitude": "072\u00b039.691,W",
+                "type": null,
+                "distance": 163.64,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 102,
+                "latitude": "003\u00b041.938,N",
+                "longitude": "072\u00b039.495,W",
+                "type": null,
+                "distance": 164.22,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 103,
+                "latitude": "003\u00b041.775,N",
+                "longitude": "072\u00b039.391,W",
+                "type": null,
+                "distance": 164.58,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 104,
+                "latitude": "003\u00b042.037,N",
+                "longitude": "072\u00b037.196,W",
+                "type": null,
+                "distance": 169.95,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 105,
+                "latitude": "003\u00b042.219,N",
+                "longitude": "072\u00b035.812,W",
+                "type": "WPM",
+                "distance": 172.78,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 106,
+                "latitude": "003\u00b041.765,N",
+                "longitude": "072\u00b035.331,W",
+                "type": null,
+                "distance": 174.11,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 107,
+                "latitude": "003\u00b041.443,N",
+                "longitude": "072\u00b032.696,W",
+                "type": null,
+                "distance": 180.06,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 108,
+                "latitude": "003\u00b041.016,N",
+                "longitude": "072\u00b031.064,W",
+                "type": null,
+                "distance": 183.78,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 109,
+                "latitude": "003\u00b040.896,N",
+                "longitude": "072\u00b031.035,W",
+                "type": "WPM",
+                "distance": 184.02,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 110,
+                "latitude": "003\u00b041.004,N",
+                "longitude": "072\u00b030.958,W",
+                "type": null,
+                "distance": 184.27,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 111,
+                "latitude": "003\u00b041.270,N",
+                "longitude": "072\u00b030.022,W",
+                "type": null,
+                "distance": 186.49,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 112,
+                "latitude": "003\u00b041.273,N",
+                "longitude": "072\u00b029.431,W",
+                "type": null,
+                "distance": 188.05,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 113,
+                "latitude": "003\u00b041.158,N",
+                "longitude": "072\u00b029.349,W",
+                "type": null,
+                "distance": 188.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 114,
+                "latitude": "003\u00b041.211,N",
+                "longitude": "072\u00b029.028,W",
+                "type": null,
+                "distance": 188.96,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 115,
+                "latitude": "003\u00b041.068,N",
+                "longitude": "072\u00b028.659,W",
+                "type": null,
+                "distance": 189.84,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 116,
+                "latitude": "003\u00b041.012,N",
+                "longitude": "072\u00b028.280,W",
+                "type": null,
+                "distance": 190.6,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 117,
+                "latitude": "003\u00b040.945,N",
+                "longitude": "072\u00b027.972,W",
+                "type": null,
+                "distance": 191.28,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 118,
+                "latitude": "003\u00b041.068,N",
+                "longitude": "072\u00b027.845,W",
+                "type": "WPM",
+                "distance": 191.62,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 119,
+                "latitude": "003\u00b040.956,N",
+                "longitude": "072\u00b027.802,W",
+                "type": "WPM",
+                "distance": 191.87,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 120,
+                "latitude": "003\u00b040.876,N",
+                "longitude": "072\u00b027.684,W",
+                "type": null,
+                "distance": 192.16,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 121,
+                "latitude": "003\u00b040.600,N",
+                "longitude": "072\u00b027.311,W",
+                "type": null,
+                "distance": 193.15,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 122,
+                "latitude": "003\u00b040.604,N",
+                "longitude": "072\u00b026.613,W",
+                "type": null,
+                "distance": 194.66,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 123,
+                "latitude": "003\u00b040.346,N",
+                "longitude": "072\u00b025.723,W",
+                "type": null,
+                "distance": 196.61,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 124,
+                "latitude": "003\u00b040.311,N",
+                "longitude": "072\u00b025.704,W",
+                "type": null,
+                "distance": 196.68,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 125,
+                "latitude": "003\u00b040.443,N",
+                "longitude": "072\u00b025.465,W",
+                "type": "WPM",
+                "distance": 197.34,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 126,
+                "latitude": "003\u00b040.508,N",
+                "longitude": "072\u00b025.383,W",
+                "type": null,
+                "distance": 197.53,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 127,
+                "latitude": "003\u00b040.954,N",
+                "longitude": "072\u00b024.840,W",
+                "type": "WPM",
+                "distance": 198.92,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 128,
+                "latitude": "003\u00b041.385,N",
+                "longitude": "072\u00b025.000,W",
+                "type": null,
+                "distance": 199.88,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 129,
+                "latitude": "003\u00b041.777,N",
+                "longitude": "072\u00b024.921,W",
+                "type": null,
+                "distance": 200.65,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 130,
+                "latitude": "003\u00b042.776,N",
+                "longitude": "072\u00b025.312,W",
+                "type": null,
+                "distance": 203.03,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 131,
+                "latitude": "003\u00b043.069,N",
+                "longitude": "072\u00b025.161,W",
+                "type": null,
+                "distance": 203.66,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 132,
+                "latitude": "003\u00b043.063,N",
+                "longitude": "072\u00b025.129,W",
+                "type": "WPM",
+                "distance": 203.72,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 30
+            },
+            {
+                "wpnumber": 133,
+                "latitude": "003\u00b043.184,N",
+                "longitude": "072\u00b025.080,W",
+                "type": null,
+                "distance": 203.98,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 134,
+                "latitude": "003\u00b043.236,N",
+                "longitude": "072\u00b024.819,W",
+                "type": "WPM",
+                "distance": 204.48,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 135,
+                "latitude": "003\u00b043.266,N",
+                "longitude": "072\u00b024.824,W",
+                "type": null,
+                "distance": 204.54,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 136,
+                "latitude": "003\u00b043.415,N",
+                "longitude": "072\u00b025.108,W",
+                "type": null,
+                "distance": 205.19,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 137,
+                "latitude": "003\u00b043.732,N",
+                "longitude": "072\u00b025.523,W",
+                "type": null,
+                "distance": 206.41,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 138,
+                "latitude": "003\u00b044.743,N",
+                "longitude": "072\u00b025.773,W",
+                "type": null,
+                "distance": 208.85,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 139,
+                "latitude": "003\u00b044.802,N",
+                "longitude": "072\u00b026.455,W",
+                "type": null,
+                "distance": 210.63,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 140,
+                "latitude": "003\u00b045.191,N",
+                "longitude": "072\u00b027.279,W",
+                "type": null,
+                "distance": 212.49,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 141,
+                "latitude": "003\u00b045.312,N",
+                "longitude": "072\u00b027.854,W",
+                "type": null,
+                "distance": 213.76,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 142,
+                "latitude": "003\u00b045.373,N",
+                "longitude": "072\u00b028.239,W",
+                "type": null,
+                "distance": 214.7,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 143,
+                "latitude": "003\u00b046.174,N",
+                "longitude": "072\u00b029.898,W",
+                "type": "WPM",
+                "distance": 219.03,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 144,
+                "latitude": "003\u00b045.990,N",
+                "longitude": "072\u00b030.648,W",
+                "type": null,
+                "distance": 220.88,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 145,
+                "latitude": "003\u00b046.068,N",
+                "longitude": "072\u00b030.862,W",
+                "type": null,
+                "distance": 221.4,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 146,
+                "latitude": "003\u00b046.186,N",
+                "longitude": "072\u00b031.151,W",
+                "type": null,
+                "distance": 222.01,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 147,
+                "latitude": "003\u00b046.702,N",
+                "longitude": "072\u00b032.705,W",
+                "type": null,
+                "distance": 226.05,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 148,
+                "latitude": "003\u00b046.718,N",
+                "longitude": "072\u00b035.096,W",
+                "type": "WPM",
+                "distance": 231.08,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 149,
+                "latitude": "003\u00b046.593,N",
+                "longitude": "072\u00b035.233,W",
+                "type": "WPM",
+                "distance": 231.44,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 150,
+                "latitude": "003\u00b046.642,N",
+                "longitude": "072\u00b035.290,W",
+                "type": null,
+                "distance": 231.58,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 151,
+                "latitude": "003\u00b047.632,N",
+                "longitude": "072\u00b036.927,W",
+                "type": "WPM",
+                "distance": 236.1,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 152,
+                "latitude": "003\u00b047.510,N",
+                "longitude": "072\u00b037.174,W",
+                "type": null,
+                "distance": 236.63,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 153,
+                "latitude": "003\u00b047.976,N",
+                "longitude": "072\u00b039.582,W",
+                "type": null,
+                "distance": 242.33,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 154,
+                "latitude": "003\u00b047.966,N",
+                "longitude": "072\u00b039.716,W",
+                "type": "WPM",
+                "distance": 242.61,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 30
+            },
+            {
+                "wpnumber": 155,
+                "latitude": "003\u00b047.997,N",
+                "longitude": "072\u00b039.725,W",
+                "type": null,
+                "distance": 242.67,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 156,
+                "latitude": "003\u00b048.227,N",
+                "longitude": "072\u00b040.409,W",
+                "type": null,
+                "distance": 244.14,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 157,
+                "latitude": "003\u00b048.198,N",
+                "longitude": "072\u00b040.510,W",
+                "type": "WPM",
+                "distance": 244.38,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 158,
+                "latitude": "003\u00b048.134,N",
+                "longitude": "072\u00b040.496,W",
+                "type": null,
+                "distance": 244.5,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 159,
+                "latitude": "003\u00b048.264,N",
+                "longitude": "072\u00b042.811,W",
+                "type": "DZ",
+                "distance": 250.4,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 160,
+                "latitude": "003\u00b048.301,N",
+                "longitude": "072\u00b043.216,W",
+                "type": null,
+                "distance": 251.33,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 161,
+                "latitude": "003\u00b048.306,N",
+                "longitude": "072\u00b043.297,W",
+                "type": null,
+                "distance": 251.49,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 162,
+                "latitude": "003\u00b048.191,N",
+                "longitude": "072\u00b043.405,W",
+                "type": "FZ",
+                "distance": 251.8,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 163,
+                "latitude": "003\u00b047.782,N",
+                "longitude": "072\u00b044.131,W",
+                "type": null,
+                "distance": 253.62,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 164,
+                "latitude": "003\u00b047.357,N",
+                "longitude": "072\u00b044.476,W",
+                "type": null,
+                "distance": 254.67,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 165,
+                "latitude": "003\u00b045.408,N",
+                "longitude": "072\u00b046.406,W",
+                "type": null,
+                "distance": 260.62,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 166,
+                "latitude": "003\u00b044.367,N",
+                "longitude": "072\u00b048.181,W",
+                "type": "WPM",
+                "distance": 265.05,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 167,
+                "latitude": "003\u00b041.613,N",
+                "longitude": "072\u00b050.799,W",
+                "type": null,
+                "distance": 272.91,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 168,
+                "latitude": "003\u00b041.441,N",
+                "longitude": "072\u00b050.602,W",
+                "type": null,
+                "distance": 273.4,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 169,
+                "latitude": "003\u00b041.393,N",
+                "longitude": "072\u00b050.539,W",
+                "type": "WPM",
+                "distance": 273.54,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 170,
+                "latitude": "003\u00b040.109,N",
+                "longitude": "072\u00b049.307,W",
+                "type": null,
+                "distance": 277.2,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 171,
+                "latitude": "003\u00b040.105,N",
+                "longitude": "072\u00b049.226,W",
+                "type": null,
+                "distance": 277.36,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 172,
+                "latitude": "003\u00b039.494,N",
+                "longitude": "072\u00b049.128,W",
+                "type": null,
+                "distance": 278.63,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 173,
+                "latitude": "003\u00b039.442,N",
+                "longitude": "072\u00b049.242,W",
+                "type": null,
+                "distance": 278.88,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 174,
+                "latitude": "003\u00b039.418,N",
+                "longitude": "072\u00b049.278,W",
+                "type": null,
+                "distance": 278.97,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 175,
+                "latitude": "003\u00b039.374,N",
+                "longitude": "072\u00b049.459,W",
+                "type": null,
+                "distance": 279.32,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 176,
+                "latitude": "003\u00b039.409,N",
+                "longitude": "072\u00b050.051,W",
+                "type": "WPM",
+                "distance": 280.57,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 30
+            },
+            {
+                "wpnumber": 177,
+                "latitude": "003\u00b039.394,N",
+                "longitude": "072\u00b050.355,W",
+                "type": null,
+                "distance": 281.24,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 178,
+                "latitude": "003\u00b039.338,N",
+                "longitude": "072\u00b050.629,W",
+                "type": null,
+                "distance": 281.85,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 179,
+                "latitude": "003\u00b039.320,N",
+                "longitude": "072\u00b050.707,W",
+                "type": "WPM",
+                "distance": 282.0,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 180,
+                "latitude": "003\u00b039.255,N",
+                "longitude": "072\u00b050.710,W",
+                "type": null,
+                "distance": 282.13,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 181,
+                "latitude": "003\u00b039.111,N",
+                "longitude": "072\u00b050.748,W",
+                "type": null,
+                "distance": 282.43,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 182,
+                "latitude": "003\u00b038.917,N",
+                "longitude": "072\u00b050.841,W",
+                "type": null,
+                "distance": 282.84,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 183,
+                "latitude": "003\u00b038.798,N",
+                "longitude": "072\u00b051.046,W",
+                "type": null,
+                "distance": 283.32,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 184,
+                "latitude": "003\u00b038.758,N",
+                "longitude": "072\u00b051.152,W",
+                "type": null,
+                "distance": 283.54,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 185,
+                "latitude": "003\u00b038.883,N",
+                "longitude": "072\u00b051.415,W",
+                "type": null,
+                "distance": 284.12,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 186,
+                "latitude": "003\u00b038.992,N",
+                "longitude": "072\u00b051.475,W",
+                "type": "WPM",
+                "distance": 284.35,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 187,
+                "latitude": "003\u00b039.211,N",
+                "longitude": "072\u00b051.644,W",
+                "type": null,
+                "distance": 284.89,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 188,
+                "latitude": "003\u00b039.099,N",
+                "longitude": "072\u00b051.805,W",
+                "type": "WPM",
+                "distance": 285.27,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 189,
+                "latitude": "003\u00b039.149,N",
+                "longitude": "072\u00b052.047,W",
+                "type": "WPM",
+                "distance": 285.74,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 190,
+                "latitude": "003\u00b039.324,N",
+                "longitude": "072\u00b052.164,W",
+                "type": "WPM",
+                "distance": 286.38,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 191,
+                "latitude": "003\u00b039.295,N",
+                "longitude": "072\u00b052.477,W",
+                "type": "WPM",
+                "distance": 287.1,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 192,
+                "latitude": "003\u00b039.328,N",
+                "longitude": "072\u00b052.762,W",
+                "type": null,
+                "distance": 287.68,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 193,
+                "latitude": "003\u00b039.273,N",
+                "longitude": "072\u00b052.887,W",
+                "type": null,
+                "distance": 287.93,
+                "speed": null,
+                "penalization": 30.0,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 194,
+                "latitude": "003\u00b039.257,N",
+                "longitude": "072\u00b053.042,W",
+                "type": "WPM",
+                "distance": 288.22,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 30
+            },
+            {
+                "wpnumber": 195,
+                "latitude": "003\u00b039.319,N",
+                "longitude": "072\u00b053.060,W",
+                "type": "WPM",
+                "distance": 288.34,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 196,
+                "latitude": "003\u00b039.325,N",
+                "longitude": "072\u00b053.241,W",
+                "type": "WPM",
+                "distance": 288.67,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 197,
+                "latitude": "003\u00b039.223,N",
+                "longitude": "072\u00b053.330,W",
+                "type": "WPM",
+                "distance": 288.92,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 198,
+                "latitude": "003\u00b039.238,N",
+                "longitude": "072\u00b053.535,W",
+                "type": null,
+                "distance": 289.31,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 199,
+                "latitude": "003\u00b039.720,N",
+                "longitude": "072\u00b053.648,W",
+                "type": "WPM",
+                "distance": 290.3,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 200,
+                "latitude": "003\u00b039.716,N",
+                "longitude": "072\u00b053.805,W",
+                "type": "WPM",
+                "distance": 290.66,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 201,
+                "latitude": "003\u00b039.384,N",
+                "longitude": "072\u00b054.519,W",
+                "type": "WPM",
+                "distance": 292.23,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 202,
+                "latitude": "003\u00b039.259,N",
+                "longitude": "072\u00b054.653,W",
+                "type": null,
+                "distance": 292.65,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 203,
+                "latitude": "003\u00b039.270,N",
+                "longitude": "072\u00b054.808,W",
+                "type": null,
+                "distance": 292.94,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 204,
+                "latitude": "003\u00b039.295,N",
+                "longitude": "072\u00b054.858,W",
+                "type": null,
+                "distance": 293.05,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 205,
+                "latitude": "003\u00b039.266,N",
+                "longitude": "072\u00b054.909,W",
+                "type": null,
+                "distance": 293.16,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 206,
+                "latitude": "003\u00b039.297,N",
+                "longitude": "072\u00b054.954,W",
+                "type": "WPM",
+                "distance": 293.3,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 207,
+                "latitude": "003\u00b039.409,N",
+                "longitude": "072\u00b054.920,W",
+                "type": null,
+                "distance": 293.54,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 208,
+                "latitude": "003\u00b038.704,N",
+                "longitude": "072\u00b056.008,W",
+                "type": null,
+                "distance": 296.31,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 209,
+                "latitude": "003\u00b038.755,N",
+                "longitude": "072\u00b056.353,W",
+                "type": null,
+                "distance": 297.0,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 210,
+                "latitude": "003\u00b038.761,N",
+                "longitude": "072\u00b056.853,W",
+                "type": null,
+                "distance": 298.0,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 211,
+                "latitude": "003\u00b038.244,N",
+                "longitude": "072\u00b058.056,W",
+                "type": "WPM",
+                "distance": 301.27,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 212,
+                "latitude": "003\u00b037.691,N",
+                "longitude": "072\u00b058.482,W",
+                "type": null,
+                "distance": 302.94,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 213,
+                "latitude": "003\u00b037.475,N",
+                "longitude": "072\u00b059.318,W",
+                "type": null,
+                "distance": 304.85,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 214,
+                "latitude": "003\u00b037.568,N",
+                "longitude": "072\u00b059.843,W",
+                "type": null,
+                "distance": 306.03,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 215,
+                "latitude": "003\u00b037.210,N",
+                "longitude": "073\u00b001.092,W",
+                "type": null,
+                "distance": 308.75,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 216,
+                "latitude": "003\u00b037.207,N",
+                "longitude": "073\u00b001.954,W",
+                "type": null,
+                "distance": 310.45,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 217,
+                "latitude": "003\u00b036.726,N",
+                "longitude": "073\u00b002.759,W",
+                "type": null,
+                "distance": 312.51,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 218,
+                "latitude": "003\u00b036.407,N",
+                "longitude": "073\u00b004.619,W",
+                "type": null,
+                "distance": 316.42,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 219,
+                "latitude": "003\u00b036.482,N",
+                "longitude": "073\u00b004.784,W",
+                "type": null,
+                "distance": 316.75,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 220,
+                "latitude": "003\u00b036.496,N",
+                "longitude": "073\u00b004.810,W",
+                "type": "WPM",
+                "distance": 316.81,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 221,
+                "latitude": "003\u00b036.284,N",
+                "longitude": "073\u00b004.800,W",
+                "type": null,
+                "distance": 317.2,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 222,
+                "latitude": "003\u00b036.185,N",
+                "longitude": "073\u00b004.844,W",
+                "type": null,
+                "distance": 317.42,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 223,
+                "latitude": "003\u00b035.553,N",
+                "longitude": "073\u00b005.462,W",
+                "type": null,
+                "distance": 319.31,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 224,
+                "latitude": "003\u00b035.760,N",
+                "longitude": "073\u00b005.528,W",
+                "type": null,
+                "distance": 319.73,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 225,
+                "latitude": "003\u00b036.007,N",
+                "longitude": "073\u00b005.621,W",
+                "type": null,
+                "distance": 320.23,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 226,
+                "latitude": "003\u00b036.043,N",
+                "longitude": "073\u00b005.671,W",
+                "type": null,
+                "distance": 320.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 227,
+                "latitude": "003\u00b035.877,N",
+                "longitude": "073\u00b006.090,W",
+                "type": null,
+                "distance": 321.27,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 228,
+                "latitude": "003\u00b035.827,N",
+                "longitude": "073\u00b006.175,W",
+                "type": "DZ",
+                "distance": 321.46,
+                "speed": 60.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 229,
+                "latitude": "003\u00b036.055,N",
+                "longitude": "073\u00b006.552,W",
+                "type": null,
+                "distance": 322.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 230,
+                "latitude": "003\u00b035.699,N",
+                "longitude": "073\u00b006.177,W",
+                "type": "FZ",
+                "distance": 323.47,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 231,
+                "latitude": "003\u00b035.197,N",
+                "longitude": "073\u00b005.893,W",
+                "type": null,
+                "distance": 324.58,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 232,
+                "latitude": "003\u00b035.091,N",
+                "longitude": "073\u00b005.906,W",
+                "type": null,
+                "distance": 324.79,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 233,
+                "latitude": "003\u00b034.787,N",
+                "longitude": "073\u00b006.337,W",
+                "type": null,
+                "distance": 325.9,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 234,
+                "latitude": "003\u00b034.739,N",
+                "longitude": "073\u00b006.598,W",
+                "type": null,
+                "distance": 326.51,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 235,
+                "latitude": "003\u00b034.714,N",
+                "longitude": "073\u00b006.816,W",
+                "type": null,
+                "distance": 326.93,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 236,
+                "latitude": "003\u00b033.649,N",
+                "longitude": "073\u00b007.607,W",
+                "type": "WPM",
+                "distance": 329.63,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 237,
+                "latitude": "003\u00b033.584,N",
+                "longitude": "073\u00b008.456,W",
+                "type": null,
+                "distance": 331.64,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 238,
+                "latitude": "003\u00b033.738,N",
+                "longitude": "073\u00b009.087,W",
+                "type": null,
+                "distance": 332.98,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 239,
+                "latitude": "003\u00b033.807,N",
+                "longitude": "073\u00b009.261,W",
+                "type": "WPM",
+                "distance": 333.37,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 240,
+                "latitude": "003\u00b034.174,N",
+                "longitude": "073\u00b009.488,W",
+                "type": null,
+                "distance": 334.22,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 241,
+                "latitude": "003\u00b034.621,N",
+                "longitude": "073\u00b009.847,W",
+                "type": null,
+                "distance": 335.55,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 242,
+                "latitude": "003\u00b034.936,N",
+                "longitude": "073\u00b009.770,W",
+                "type": "WPM",
+                "distance": 336.18,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 243,
+                "latitude": "003\u00b035.028,N",
+                "longitude": "073\u00b009.739,W",
+                "type": null,
+                "distance": 336.37,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 244,
+                "latitude": "003\u00b035.082,N",
+                "longitude": "073\u00b009.807,W",
+                "type": null,
+                "distance": 336.53,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 245,
+                "latitude": "003\u00b035.338,N",
+                "longitude": "073\u00b010.214,W",
+                "type": null,
+                "distance": 337.47,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 246,
+                "latitude": "003\u00b035.404,N",
+                "longitude": "073\u00b010.259,W",
+                "type": "WPM",
+                "distance": 337.63,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 247,
+                "latitude": "003\u00b035.781,N",
+                "longitude": "073\u00b010.251,W",
+                "type": null,
+                "distance": 338.44,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 248,
+                "latitude": "003\u00b035.996,N",
+                "longitude": "073\u00b010.273,W",
+                "type": null,
+                "distance": 338.86,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 249,
+                "latitude": "003\u00b036.415,N",
+                "longitude": "073\u00b010.353,W",
+                "type": null,
+                "distance": 339.66,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 250,
+                "latitude": "003\u00b036.475,N",
+                "longitude": "073\u00b010.381,W",
+                "type": null,
+                "distance": 339.78,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 251,
+                "latitude": "003\u00b037.711,N",
+                "longitude": "073\u00b009.251,W",
+                "type": "WPM",
+                "distance": 343.47,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 252,
+                "latitude": "003\u00b037.718,N",
+                "longitude": "073\u00b008.947,W",
+                "type": null,
+                "distance": 344.28,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 253,
+                "latitude": "003\u00b037.901,N",
+                "longitude": "073\u00b008.786,W",
+                "type": null,
+                "distance": 344.76,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 254,
+                "latitude": "003\u00b041.232,N",
+                "longitude": "073\u00b009.819,W",
+                "type": null,
+                "distance": 353.67,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 255,
+                "latitude": "003\u00b041.361,N",
+                "longitude": "073\u00b014.592,W",
+                "type": null,
+                "distance": 363.55,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 256,
+                "latitude": "003\u00b042.295,N",
+                "longitude": "073\u00b014.355,W",
+                "type": "DZ",
+                "distance": 366.05,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 257,
+                "latitude": "003\u00b042.579,N",
+                "longitude": "073\u00b014.317,W",
+                "type": null,
+                "distance": 366.58,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 258,
+                "latitude": "003\u00b042.591,N",
+                "longitude": "073\u00b014.734,W",
+                "type": null,
+                "distance": 367.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 259,
+                "latitude": "003\u00b042.679,N",
+                "longitude": "073\u00b014.734,W",
+                "type": null,
+                "distance": 367.52,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 260,
+                "latitude": "003\u00b042.698,N",
+                "longitude": "073\u00b014.915,W",
+                "type": null,
+                "distance": 367.85,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 261,
+                "latitude": "003\u00b042.716,N",
+                "longitude": "073\u00b015.117,W",
+                "type": "FZ",
+                "distance": 368.23,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 262,
+                "latitude": "003\u00b043.669,N",
+                "longitude": "073\u00b019.970,W",
+                "type": null,
+                "distance": 377.59,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 263,
+                "latitude": "003\u00b046.048,N",
+                "longitude": "073\u00b019.183,W",
+                "type": null,
+                "distance": 382.45,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 264,
+                "latitude": "003\u00b046.144,N",
+                "longitude": "073\u00b019.178,W",
+                "type": "WPM",
+                "distance": 382.63,
+                "speed": null,
+                "penalization": 0.020833333333333332,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 265,
+                "latitude": "003\u00b046.504,N",
+                "longitude": "073\u00b019.162,W",
+                "type": null,
+                "distance": 383.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 266,
+                "latitude": "003\u00b046.521,N",
+                "longitude": "073\u00b018.945,W",
+                "type": "WPM",
+                "distance": 383.75,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 267,
+                "latitude": "003\u00b046.532,N",
+                "longitude": "073\u00b018.903,W",
+                "type": null,
+                "distance": 383.83,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 268,
+                "latitude": "003\u00b047.432,N",
+                "longitude": "073\u00b017.243,W",
+                "type": null,
+                "distance": 387.44,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 269,
+                "latitude": "003\u00b047.417,N",
+                "longitude": "073\u00b016.642,W",
+                "type": null,
+                "distance": 388.56,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 270,
+                "latitude": "003\u00b047.330,N",
+                "longitude": "073\u00b015.240,W",
+                "type": null,
+                "distance": 391.17,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 271,
+                "latitude": "003\u00b047.544,N",
+                "longitude": "073\u00b014.743,W",
+                "type": null,
+                "distance": 392.18,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 272,
+                "latitude": "003\u00b047.963,N",
+                "longitude": "073\u00b013.690,W",
+                "type": null,
+                "distance": 394.35,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 273,
+                "latitude": "003\u00b048.481,N",
+                "longitude": "073\u00b013.100,W",
+                "type": null,
+                "distance": 395.81,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 274,
+                "latitude": "003\u00b049.088,N",
+                "longitude": "073\u00b012.761,W",
+                "type": null,
+                "distance": 397.12,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 275,
+                "latitude": "003\u00b049.428,N",
+                "longitude": "073\u00b012.059,W",
+                "type": "DZ",
+                "distance": 398.6,
+                "speed": 100.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 276,
+                "latitude": "003\u00b050.911,N",
+                "longitude": "073\u00b011.729,W",
+                "type": null,
+                "distance": 401.71,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 277,
+                "latitude": "003\u00b051.262,N",
+                "longitude": "073\u00b014.063,W",
+                "type": "DZ",
+                "distance": 406.49,
+                "speed": 80.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 278,
+                "latitude": "003\u00b051.674,N",
+                "longitude": "073\u00b016.214,W",
+                "type": "WPM",
+                "distance": 410.57,
+                "speed": null,
+                "penalization": 0.010416666666666666,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 279,
+                "latitude": "003\u00b051.609,N",
+                "longitude": "073\u00b018.611,W",
+                "type": "DZ",
+                "distance": 415.14,
+                "speed": 60.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 280,
+                "latitude": "003\u00b051.628,N",
+                "longitude": "073\u00b018.904,W",
+                "type": "FZ",
+                "distance": 415.69,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 281,
+                "latitude": "003\u00b051.135,N",
+                "longitude": "073\u00b020.966,W",
+                "type": null,
+                "distance": 419.71,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 282,
+                "latitude": "003\u00b052.427,N",
+                "longitude": "073\u00b020.733,W",
+                "type": null,
+                "distance": 422.2,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 283,
+                "latitude": "003\u00b052.711,N",
+                "longitude": "073\u00b020.739,W",
+                "type": null,
+                "distance": 422.8,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 284,
+                "latitude": "003\u00b053.884,N",
+                "longitude": "073\u00b028.015,W",
+                "type": "DZ",
+                "distance": 436.81,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 285,
+                "latitude": "003\u00b053.852,N",
+                "longitude": "073\u00b028.058,W",
+                "type": null,
+                "distance": 436.91,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 286,
+                "latitude": "003\u00b054.047,N",
+                "longitude": "073\u00b028.207,W",
+                "type": null,
+                "distance": 437.36,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 287,
+                "latitude": "003\u00b054.043,N",
+                "longitude": "073\u00b028.241,W",
+                "type": null,
+                "distance": 437.43,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 288,
+                "latitude": "003\u00b054.176,N",
+                "longitude": "073\u00b028.343,W",
+                "type": null,
+                "distance": 437.74,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 289,
+                "latitude": "003\u00b054.391,N",
+                "longitude": "073\u00b028.454,W",
+                "type": "FZ",
+                "distance": 438.2,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 290,
+                "latitude": "003\u00b055.901,N",
+                "longitude": "073\u00b030.264,W",
+                "type": null,
+                "distance": 443.21,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 291,
+                "latitude": "003\u00b057.520,N",
+                "longitude": "073\u00b030.530,W",
+                "type": null,
+                "distance": 447.44,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 292,
+                "latitude": "003\u00b059.897,N",
+                "longitude": "073\u00b036.847,W",
+                "type": null,
+                "distance": 460.26,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 293,
+                "latitude": "004\u00b000.363,N",
+                "longitude": "073\u00b038.598,W",
+                "type": "DZ",
+                "distance": 463.69,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 294,
+                "latitude": "004\u00b000.595,N",
+                "longitude": "073\u00b038.983,W",
+                "type": "FZ",
+                "distance": 464.54,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 295,
+                "latitude": "004\u00b000.804,N",
+                "longitude": "073\u00b039.473,W",
+                "type": null,
+                "distance": 465.53,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 296,
+                "latitude": "004\u00b001.020,N",
+                "longitude": "073\u00b039.954,W",
+                "type": "DZ",
+                "distance": 466.51,
+                "speed": 45.0,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 297,
+                "latitude": "004\u00b001.035,N",
+                "longitude": "073\u00b040.078,W",
+                "type": "FZ",
+                "distance": 466.75,
+                "speed": null,
+                "penalization": null,
+                "ratius": 50
+            },
+            {
+                "wpnumber": 298,
+                "latitude": "004\u00b001.346,N",
+                "longitude": "073\u00b042.871,W",
+                "type": null,
+                "distance": 472.08,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 299,
+                "latitude": "004\u00b000.878,N",
+                "longitude": "073\u00b043.045,W",
+                "type": null,
+                "distance": 473.01,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 300,
+                "latitude": "004\u00b000.053,N",
+                "longitude": "073\u00b043.309,W",
+                "type": null,
+                "distance": 474.62,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 301,
+                "latitude": "004\u00b000.077,N",
+                "longitude": "073\u00b044.401,W",
+                "type": null,
+                "distance": 476.8,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            },
+            {
+                "wpnumber": 302,
+                "latitude": "003\u00b059.934,N",
+                "longitude": "073\u00b044.511,W",
+                "type": "FINISH",
+                "distance": 477.14,
+                "speed": null,
+                "penalization": null,
+                "ratius": 90
+            },
+            {
+                "wpnumber": 303,
+                "latitude": "003\u00b059.892,N",
+                "longitude": "073\u00b044.546,W",
+                "type": null,
+                "distance": 477.24,
+                "speed": null,
+                "penalization": null,
+                "ratius": null
+            }
+        ]
+    }
 ]

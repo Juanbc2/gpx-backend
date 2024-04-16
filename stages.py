@@ -1,34 +1,37 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import Text, Optional
-from datetime import datetime
-from uuid import uuid4 as uuid
+from typing import Optional
+import uuid
 import json
 
 router = APIRouter()
-
-f = open("./data/stagesData.json")
-json_data = json.load(f)
-stages = json_data
+stages = []
+try:
+    with open('./data/stagesData.json', 'r') as f:
+        json_data = json.load(f)
+        if json_data:
+            stages = json_data
+except (FileNotFoundError, json.JSONDecodeError):
+    stages = []
 
 class Waypoint(BaseModel):
     wpnumber: int
-    latitude: float
-    longitude: float
-    type: Text
+    latitude: str
+    longitude: str
+    type: Optional[str] = None
     distance: float
-    speed: float
-    penalization: str
-    ratius: int
+    speed: Optional[float] = None
+    penalization: Optional[float] = None
+    ratius: Optional[int] = None
 
 # stage model
 class Stage(BaseModel):
-    id: Optional[str] = str(uuid())
+    id: Optional[str] = None
     eventId: str
-    categoriesIds: list
+    categoriesIds: list[int]
     details: str
     stageDate: str
-    waypoints: Waypoint
+    waypoints: list[Waypoint]
 
 
 @router.get("/stages",tags=["stages"])
@@ -44,5 +47,20 @@ def get_stage(stage_id: str):
 
 @router.post("/stages",tags=["stages"])
 def add_stage(stage: Stage):
-    stages.append(stage)
+    print("stage",stage)
+    stage.id = str(uuid.uuid4())
+    stage_dict = stage.model_dump()
+    stages.append(stage_dict) 
+    with open('./data/stagesData.json', 'w') as f:
+        json.dump(stages, f,indent=4)
     return stages
+
+@router.delete("/stages/{stage_id}",tags=["stages"])
+def delete_stage(stage_id: str):
+    for stage in stages:
+        if str(stage["id"]) == stage_id:
+            stages.remove(stage)
+            with open('./data/stagesData.json', 'w') as f:
+                json.dump(stages, f,indent=4)
+            return stages
+    raise HTTPException(status_code=404, detail="stage not found")
