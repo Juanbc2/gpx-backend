@@ -36,7 +36,10 @@ class Stage(BaseModel):
 
 @router.get("/stages",tags=["stages"])
 def get_stages():
-    return stages
+    try:
+        return stages
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Error getting stages," + e)
 
 @router.get("/stages/{stage_id}",tags=["stages"])
 def get_stage(stage_id: str):
@@ -47,13 +50,15 @@ def get_stage(stage_id: str):
 
 @router.post("/stages",tags=["stages"])
 def add_stage(stage: Stage):
-    print("stage",stage)
-    stage.id = str(uuid.uuid4())
-    stage_dict = stage.model_dump()
-    stages.append(stage_dict) 
-    with open('./data/stagesData.json', 'w') as f:
-        json.dump(stages, f,indent=4)
-    return stages
+    try:
+        stage.id = str(uuid.uuid4())
+        stage_dict = stage.model_dump()
+        stages.append(stage_dict) 
+        with open('./data/stagesData.json', 'w') as f:
+            json.dump(stages, f,indent=4)
+        return stages
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Error adding stage" + e)
 
 @router.delete("/stages/{stage_id}",tags=["stages"])
 def delete_stage(stage_id: str):
