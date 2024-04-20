@@ -1,12 +1,17 @@
 [
-  {
-    "id": "4bc84fc4-73c0-415e-a041-a0783cf04bcc",
-    "name": "Darien Grand Prix Motos",
-    "location": "Darien Zona Sur",
-    "details": "Evento principal",
-    "eventStartDate": "2024-04-16",
-    "eventEndDate": "2024-04-30",
-    "stagesIds": [],
-    "categoryIds": [3, 4, 5, 6, 7]
-  }
+    {
+        "id": "c1c42ce3-ccc6-42a5-89b5-ae8c2288dc5d",
+        "name": "Darien Inicial",
+        "location": "Darien zona norte",
+        "details": "test",
+        "eventStartDate": "2024-04-01",
+        "eventEndDate": "2024-04-30",
+        "stagesIds": [],
+        "categoryIds": [
+            3,
+            4,
+            5,
+            6
+        ]
+    }
 ]
