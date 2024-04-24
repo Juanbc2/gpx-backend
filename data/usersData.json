@@ -6,5 +6,9 @@
     {
         "username": "pedro pedro",
         "hashed_password": "$2b$12$UwrtkqP3K8RGGMCcg7OFluX.w.efRC/mcDmXuu5gxPSqQzSUb0hQ."
+    },
+    {
+        "username": "admin",
+        "hashed_password": "$2b$12$Jwnhijg0TG/H2zyN39NYk.SCzuMgCWgrN3c.MtLoO4oOC24eBh3V."
     }
 ]

@@ -1,0 +1,18 @@
+[
+    {
+        "id": "c11075f6-6be1-4276-a826-c209c3825698",
+        "name": "Alejandro",
+        "lastName": "Henao",
+        "number": "356",
+        "identification": "9853261",
+        "vehicle": {
+            "brand": "Hm",
+            "model": "Cre 450x",
+            "categoryId": 6,
+            "plate": "AAA000",
+            "securePolicy": "Con p\u00f3liza Darien"
+        },
+        "currentStagesIds": [],
+        "pastStagesIds": []
+    }
+]
