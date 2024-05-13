@@ -15,14 +15,15 @@ except (FileNotFoundError, json.JSONDecodeError):
     stages = []
 
 class Waypoint(BaseModel):
-    wpnumber: int
+    wpnumber: Optional[int] = None
     latitude: str
     longitude: str
     type: Optional[str] = None
     distance: float
     speed: Optional[float] = None
-    penalization: Optional[float] = None
+    penalization: Optional[str] = None
     ratius: Optional[int] = None
+    neutralization: Optional[str] = None
 
 # stage model
 class Stage(BaseModel):

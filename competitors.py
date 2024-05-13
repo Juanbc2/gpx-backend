@@ -32,6 +32,11 @@ class Competitor(BaseModel):
     currentStagesIds: list[int]
     pastStagesIds: list[int]
 
+class CompetitorGpx(BaseModel):
+    competitorId: str
+    filePath: str
+    stageId: str
+
 
 @router.get("/competitors",tags=["competitors"])
 def get_competitors():
@@ -68,3 +73,27 @@ def delete_competitor(competitor_id: str):
                 json.dump(competitors, f,indent=4)
             return competitors
     raise HTTPException(status_code=404, detail="competitor not found")
+
+@router.put("/competitors/{competitor_id}",tags=["competitors"])
+def update_competitor(competitor_id: str, competitor: Competitor):
+    for competitor in competitors:
+        if str(competitor["id"]) == competitor_id:
+            competitor = competitor
+            with open('./data/competitorsData.json', 'w') as f:
+                json.dump(competitors, f,indent=4)
+            return competitors
+    raise HTTPException(status_code=404, detail="competitor not found")
+
+# Post competition .gpx file path
+@router.post("/competitors/gpx",tags=["competitors"])
+def post_gpx_file(competitorGpx: CompetitorGpx):
+    for competitor in competitors:
+        if str(competitor["id"]) == competitorGpx.competitorId:
+            if competitorGpx.stageId not in competitor["currentStagesIds"]:
+                # Add gpx analysis outter function here
+                competitor["currentStagesIds"].append(competitorGpx.stageId)
+            with open('./data/competitorsData.json', 'w') as f:
+                json.dump(competitors, f,indent=4)
+            return competitors
+    raise HTTPException(status_code=404, detail="competitor not found")
+

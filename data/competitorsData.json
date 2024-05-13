@@ -14,5 +14,23 @@
         },
         "currentStagesIds": [],
         "pastStagesIds": []
+    },
+    {
+        "id": "e737da8f-1995-4bb1-ab8c-b7b0e3e1f364",
+        "name": "Juan",
+        "lastName": "Calle",
+        "number": "456",
+        "identification": "123122312",
+        "vehicle": {
+            "brand": "RENAULT",
+            "model": "2016 RC-12",
+            "categoryId": 2,
+            "plate": "AAA000",
+            "securePolicy": "A12312DG123"
+        },
+        "currentStagesIds": [
+            "01d41142-f5bb-4345-839b-0bdfdddbbb34"
+        ],
+        "pastStagesIds": []
     }
 ]
