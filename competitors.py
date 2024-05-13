@@ -5,7 +5,9 @@ import uuid
 import json
 
 router = APIRouter()
+# validations_i= Validations()
 competitors = []
+stages = []
 try:
     with open('./data/competitorsData.json', 'r') as f:
         json_data = json.load(f)
@@ -13,6 +15,14 @@ try:
             competitors = json_data
 except (FileNotFoundError, json.JSONDecodeError):
     competitors = []
+
+try:
+    with open('./data/stagesData.json', 'r') as f:
+        json_data = json.load(f)
+        if json_data:
+            stages = json_data
+except (FileNotFoundError, json.JSONDecodeError):
+    stages = []
 
 class Vehicle(BaseModel):
     brand: str
@@ -90,8 +100,13 @@ def post_gpx_file(competitorGpx: CompetitorGpx):
     for competitor in competitors:
         if str(competitor["id"]) == competitorGpx.competitorId:
             if competitorGpx.stageId not in competitor["currentStagesIds"]:
-                # Add gpx analysis outter function here
                 competitor["currentStagesIds"].append(competitorGpx.stageId)
+            for stage in stages:
+                if str(stage["id"]) == competitorGpx.stageId:
+                    print("Stage waypoints: " + str(stage))
+                    print("Gpx file path: " + competitorGpx.filePath)
+                    # logica para comparar waypoints y gpx file
+                    # validations_i.validations(str(stage), competitorGpx.filePath)
             with open('./data/competitorsData.json', 'w') as f:
                 json.dump(competitors, f,indent=4)
             return competitors
