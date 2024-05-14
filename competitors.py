@@ -3,9 +3,10 @@ from pydantic import BaseModel
 from typing import Optional
 import uuid
 import json
+from validations import Validations
 
 router = APIRouter()
-# validations_i= Validations()
+validations_i = Validations()
 competitors = []
 stages = []
 try:
@@ -103,10 +104,10 @@ def post_gpx_file(competitorGpx: CompetitorGpx):
                 competitor["currentStagesIds"].append(competitorGpx.stageId)
             for stage in stages:
                 if str(stage["id"]) == competitorGpx.stageId:
-                    print("Stage waypoints: " + str(stage))
-                    print("Gpx file path: " + competitorGpx.filePath)
-                    # logica para comparar waypoints y gpx file
-                    # validations_i.validations(str(stage), competitorGpx.filePath)
+                    # logica para comparar waypoints y gpx file 
+                    route = competitorGpx.filePath.replace("\\", "/")
+                    validationResult = validations_i.validations(stage, route)
+                    print("Validation result: " + str(validationResult))
             with open('./data/competitorsData.json', 'w') as f:
                 json.dump(competitors, f,indent=4)
             return competitors
