@@ -12,7 +12,9 @@
             "plate": "AAA000",
             "securePolicy": "Con p\u00f3liza Darien"
         },
-        "currentStagesIds": [],
+        "currentStagesIds": [
+            "01d41142-f5bb-4345-839b-0bdfdddbbb34"
+        ],
         "pastStagesIds": []
     },
     {

@@ -19,6 +19,7 @@ class Validations:
         self.totalTime=0
 
     def validations(self, file_path,rutagpx):
+        print("Validations started")
         ##El file_Path es un String con el Json que retorna el Front
         matrizCompleta = self.carga(file_path)
         matrizCompleta['latitude'] = self.dms_to_dd(matrizCompleta['latitude'])
@@ -35,12 +36,14 @@ class Validations:
         mRuta=df_ruta
 
         mPenalizacion=df_penalizacion
+        mPenalizacion['Penalizacion Total'] = mPenalizacion['Penalizacion Total'].astype(str)
+        mPenalizacion['Penalizacion Total'] = mPenalizacion['Penalizacion Total'].str.split().str[-1]
         total=self.totalTime+self.penalizacion.total_seconds()
 
         total=self.segToHours(total)
 
         archivoJson=self.return_to_json(tiempoCarrera,mRuta,mPenalizacion,total)
-        print(archivoJson)
+        print("Validations finished")
         return archivoJson
 
     def return_to_json(self,tiempoCarrera,mRuta,mPenalizacion,total):

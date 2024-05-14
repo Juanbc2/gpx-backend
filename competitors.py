@@ -6,7 +6,6 @@ import json
 from validations import Validations
 
 router = APIRouter()
-validations_i = Validations()
 competitors = []
 stages = []
 try:
@@ -102,14 +101,14 @@ def post_gpx_file(competitorGpx: CompetitorGpx):
         if str(competitor["id"]) == competitorGpx.competitorId:
             if competitorGpx.stageId not in competitor["currentStagesIds"]:
                 competitor["currentStagesIds"].append(competitorGpx.stageId)
-            for stage in stages:
-                if str(stage["id"]) == competitorGpx.stageId:
-                    # logica para comparar waypoints y gpx file 
-                    route = competitorGpx.filePath.replace("\\", "/")
-                    validationResult = validations_i.validations(stage, route)
-                    print("Validation result: " + str(validationResult))
             with open('./data/competitorsData.json', 'w') as f:
                 json.dump(competitors, f,indent=4)
-            return competitors
+            for stage in stages:
+                if str(stage["id"]) == competitorGpx.stageId:
+                    # logica para comparar waypoints y gpx file
+                    validations_i = Validations()
+                    route = competitorGpx.filePath.replace("\\", "/")
+                    validationResult = validations_i.validations(stage, route)
+                    return validationResult
     raise HTTPException(status_code=404, detail="competitor not found")
 
