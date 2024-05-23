@@ -22,7 +22,7 @@ class Event(BaseModel):
     details: Optional[str] = None
     eventStartDate: str
     eventEndDate: str
-    stagesIds: Optional[list] = []
+    stages: Optional[list] = []
     categoryIds: list[int]
 
 
@@ -31,7 +31,7 @@ def get_events():
     try:
         return events
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Error getting events," + e)
+        raise HTTPException(status_code=500, detail="Error getting events,"+str(e))
 
 
 @router.get("/events/{event_id}",tags=["events"])
@@ -51,7 +51,7 @@ def add_event(event: Event):
             json.dump(events, f,indent=4)
         return events
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Error adding event"+ e)
+        raise HTTPException(status_code=500, detail="Error adding event"+str(e))
     
 
 @router.delete("/events/{event_id}",tags=["events"])
@@ -62,4 +62,13 @@ def delete_event(event_id: str):
             with open('./data/eventsData.json', 'w') as f:
                 json.dump(events, f,indent=4)
             return events
+    raise HTTPException(status_code=404, detail="event not found")
+
+def add_event_stage(event_id: str, stage_id: str,stage_details: str):
+    for event in events:
+        if str(event["id"]) == event_id:
+            event["stages"].append({"stageId":stage_id, "stageDetails":stage_details})
+            with open('./data/eventsData.json', 'w') as f:
+                json.dump(events, f,indent=4)
+            return event
     raise HTTPException(status_code=404, detail="event not found")

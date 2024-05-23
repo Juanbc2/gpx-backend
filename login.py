@@ -56,7 +56,6 @@ def get_user(username: str):
 
 @router.post("/users/login",tags=["users"])
 async def login(user: User):
-    print(user)
     user_in_db = get_user(user.username)
     if not user_in_db or not verify_password(user.password, user_in_db["hashed_password"]):
         raise HTTPException(status_code=401, detail="Invalid username or password")

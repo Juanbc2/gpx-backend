@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import Optional
 import uuid
 import json
+from events import add_event_stage
 
 router = APIRouter()
 stages = []
@@ -40,7 +41,7 @@ def get_stages():
     try:
         return stages
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Error getting stages," + e)
+        raise HTTPException(status_code=500, detail="Error getting stages"+str(e))
 
 @router.get("/stages/{stage_id}",tags=["stages"])
 def get_stage(stage_id: str):
@@ -54,12 +55,13 @@ def add_stage(stage: Stage):
     try:
         stage.id = str(uuid.uuid4())
         stage_dict = stage.model_dump()
-        stages.append(stage_dict) 
+        stages.append(stage_dict)
+        add_event_stage(stage.eventId, stage.id, stage.details)
         with open('./data/stagesData.json', 'w') as f:
             json.dump(stages, f,indent=4)
         return stages
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Error adding stage" + e)
+        raise HTTPException(status_code=500, detail="Error adding stage,"+str(e))
 
 @router.delete("/stages/{stage_id}",tags=["stages"])
 def delete_stage(stage_id: str):

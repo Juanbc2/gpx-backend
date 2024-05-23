@@ -1,17 +1,17 @@
 [
-    {
-        "id": "c1c42ce3-ccc6-42a5-89b5-ae8c2288dc5d",
-        "name": "Darien Inicial",
-        "location": "Darien zona norte",
-        "details": "test",
-        "eventStartDate": "2024-04-01",
-        "eventEndDate": "2024-04-30",
-        "stagesIds": [],
-        "categoryIds": [
-            3,
-            4,
-            5,
-            6
-        ]
-    }
+  {
+    "id": "a1f2c9f5-d732-4a1d-8d40-c22a050b1b2f",
+    "name": "Darien 2024",
+    "location": "darien",
+    "details": "darien 4x4",
+    "eventStartDate": "2024-05-23",
+    "eventEndDate": "2024-09-07",
+    "stages": [
+      {
+        "stageId": "5cbff5fc-17ce-4b9f-8656-0a2923d10e48",
+        "stageDetails": "Etapa 1"
+      }
+    ],
+    "categoryIds": [2]
+  }
 ]

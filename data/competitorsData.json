@@ -1,38 +1,36 @@
 [
     {
-        "id": "c11075f6-6be1-4276-a826-c209c3825698",
-        "name": "Alejandro",
-        "lastName": "Henao",
-        "number": "356",
-        "identification": "9853261",
+        "id": "f2f1d20b-5d28-4510-8f64-b4e718af7536",
+        "name": "Fabian",
+        "lastName": "Maya",
+        "number": "1",
+        "identification": "11111111111111",
         "vehicle": {
-            "brand": "Hm",
-            "model": "Cre 450x",
-            "categoryId": 6,
-            "plate": "AAA000",
-            "securePolicy": "Con p\u00f3liza Darien"
+            "brand": "",
+            "model": "",
+            "categoryId": 2,
+            "plate": "",
+            "securePolicy": ""
         },
         "currentStagesIds": [
-            "01d41142-f5bb-4345-839b-0bdfdddbbb34"
-        ],
-        "pastStagesIds": []
+            "5cbff5fc-17ce-4b9f-8656-0a2923d10e48"
+        ]
     },
     {
-        "id": "e737da8f-1995-4bb1-ab8c-b7b0e3e1f364",
-        "name": "Juan",
-        "lastName": "Calle",
-        "number": "456",
-        "identification": "123122312",
+        "id": "be361bf8-900c-4016-8486-65e7ca6bb0ec",
+        "name": "Jose",
+        "lastName": "Bolivar",
+        "number": "2",
+        "identification": "22222222222222",
         "vehicle": {
-            "brand": "RENAULT",
-            "model": "2016 RC-12",
+            "brand": "",
+            "model": "",
             "categoryId": 2,
-            "plate": "AAA000",
-            "securePolicy": "A12312DG123"
+            "plate": "",
+            "securePolicy": ""
         },
         "currentStagesIds": [
-            "01d41142-f5bb-4345-839b-0bdfdddbbb34"
-        ],
-        "pastStagesIds": []
+            "5cbff5fc-17ce-4b9f-8656-0a2923d10e48"
+        ]
     }
 ]

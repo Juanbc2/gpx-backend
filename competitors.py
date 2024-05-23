@@ -25,11 +25,11 @@ except (FileNotFoundError, json.JSONDecodeError):
     stages = []
 
 class Vehicle(BaseModel):
-    brand: str
-    model: str
+    brand: Optional[str] = None
+    model: Optional[str] = None
     categoryId: int
-    plate: str
-    securePolicy: str
+    plate: Optional[str] = None
+    securePolicy: Optional[str] = None
 
 # competitor model
 class Competitor(BaseModel):
@@ -40,7 +40,6 @@ class Competitor(BaseModel):
     identification: str
     vehicle: Vehicle
     currentStagesIds: list[int]
-    pastStagesIds: list[int]
 
 class CompetitorGpx(BaseModel):
     competitorId: str
@@ -53,7 +52,7 @@ def get_competitors():
     try:
         return competitors
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Error getting competitors," + e)
+        raise HTTPException(status_code=500, detail="Error getting competitors,"+str(e))
 
 @router.get("/competitors/{competitor_id}",tags=["competitors"])
 def get_competitor(competitor_id: str):
@@ -72,7 +71,7 @@ def add_competitor(competitor: Competitor):
             json.dump(competitors, f,indent=4)
         return competitors
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Error adding competitor" + e)
+        raise HTTPException(status_code=500, detail="Error adding competitor"+str(e))
 
 @router.delete("/competitors/{competitor_id}",tags=["competitors"])
 def delete_competitor(competitor_id: str):
@@ -101,8 +100,8 @@ def post_gpx_file(competitorGpx: CompetitorGpx):
         if str(competitor["id"]) == competitorGpx.competitorId:
             if competitorGpx.stageId not in competitor["currentStagesIds"]:
                 competitor["currentStagesIds"].append(competitorGpx.stageId)
-            with open('./data/competitorsData.json', 'w') as f:
-                json.dump(competitors, f,indent=4)
+                with open('./data/competitorsData.json', 'w') as f:
+                    json.dump(competitors, f,indent=4)       
             for stage in stages:
                 if str(stage["id"]) == competitorGpx.stageId:
                     # logica para comparar waypoints y gpx file
@@ -110,5 +109,6 @@ def post_gpx_file(competitorGpx: CompetitorGpx):
                     route = competitorGpx.filePath.replace("\\", "/")
                     validationResult = validations_i.validations(stage, route)
                     return validationResult
+            raise HTTPException(status_code=400, detail="Error in gpx file validation")
     raise HTTPException(status_code=404, detail="competitor not found")
 
