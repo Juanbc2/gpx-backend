@@ -34,6 +34,14 @@ def get_event(event_id: int,db: Session= Depends(get_db)):
         return event
     else:
         raise HTTPException(status_code=404, detail="Event not found")
+    
+@router.get("/events/stages/",tags=["events"], response_model=list[events_schema.EventWithStages])
+def get_events_with_stages(db: Session= Depends(get_db)):
+    events = events_service.get_events_with_stages(db=db)
+    if events is not None:
+        return events
+    else:
+        raise HTTPException(status_code=404, detail="Events not found")
 
 @router.post("/events",tags=["events"])
 def add_event(event: events_schema.Event,db: Session= Depends(get_db)):
@@ -42,3 +50,11 @@ def add_event(event: events_schema.Event,db: Session= Depends(get_db)):
         raise HTTPException(status_code=200, detail="Event created successfully")
     else:
         raise HTTPException(status_code=500, detail="Error creating event")
+    
+@router.delete("/events/{event_id}",tags=["events"])
+def delete_event(event_id: int,db: Session= Depends(get_db)):
+    event = events_service.delete_event_by_id(db=db, event_id=event_id)
+    if event is not None:
+        raise HTTPException(status_code=200, detail="Event deleted successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error deleting event")

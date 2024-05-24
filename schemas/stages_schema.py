@@ -14,11 +14,21 @@ class Waypoint(BaseModel):
 
 
 class Stage(BaseModel):
+    id: Optional[int] = None
     name: str
     eventId : int
     details: str
     stageDate: str 
     waypoints: list[Waypoint]
+    categoriesIds: list[int]
+
+class StageWithoutWaypoints(BaseModel):
+    id: Optional[int] = None
+    name: str
+    eventId : int
+    details: str
+    stageDate: str 
+    categoriesIds: list[int]
     
 
 

@@ -1,114 +1,61 @@
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from typing import Optional
-import uuid
-import json
-from utils.validations import Validations
+from fastapi import APIRouter,Depends, HTTPException
+from database import models
+from schemas import competitors_schema
+from database.database import SessionLocal, engine
+from sqlalchemy.orm import Session
+from services import competitors_service
+
+models.Base.metadata.create_all(bind=engine)
 
 router = APIRouter()
-competitors = []
-stages = []
-try:
-    with open('./data/competitorsData.json', 'r') as f:
-        json_data = json.load(f)
-        if json_data:
-            competitors = json_data
-except (FileNotFoundError, json.JSONDecodeError):
-    competitors = []
 
-try:
-    with open('./data/stagesData.json', 'r') as f:
-        json_data = json.load(f)
-        if json_data:
-            stages = json_data
-except (FileNotFoundError, json.JSONDecodeError):
-    stages = []
-
-class Vehicle(BaseModel):
-    brand: Optional[str] = None
-    model: Optional[str] = None
-    categoryId: int
-    plate: Optional[str] = None
-    securePolicy: Optional[str] = None
-
-# competitor model
-class Competitor(BaseModel):
-    id: Optional[str] = None
-    name: str
-    lastName: str
-    number: str
-    identification: str
-    vehicle: Vehicle
-    currentStagesIds: list[int]
-
-class CompetitorGpx(BaseModel):
-    competitorId: str
-    filePath: str
-    stageId: str
-
-
-@router.get("/competitors",tags=["competitors"])
-def get_competitors():
+def get_db():
+    db = SessionLocal()
     try:
-        return competitors
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="Error getting competitors,"+str(e))
+        yield db
+    finally:
+        db.close()
 
-@router.get("/competitors/{competitor_id}",tags=["competitors"])
-def get_competitor(competitor_id: str):
-    for competitor in competitors:
-        if str(competitor["id"]) == competitor_id:
-            return competitor
-    raise HTTPException(status_code=404, detail="Post not found")
+@router.get("/competitors",tags=["competitors"], response_model=list[competitors_schema.Competitor])
+def get_competitors(db: Session= Depends(get_db)):
+    competitors = competitors_service.get_competitors(db=db)
+    if competitors is not None:
+        return competitors
+    else:
+        raise HTTPException(status_code=404, detail="Competitors not found")
+    
+    
+@router.get("/competitors/{competitor_id}",tags=["competitors"], response_model=competitors_schema.Competitor)
+def get_competitor(competitor_id: str,db: Session= Depends(get_db)):
+    competitor = competitors_service.get_competitor_by_id(db=db, competitor_id=competitor_id)
+    if competitor is not None:
+        return competitor
+    else:
+        raise HTTPException(status_code=404, detail="Competitor not found")
 
 @router.post("/competitors",tags=["competitors"])
-def add_competitor(competitor: Competitor):
-    try:
-        competitor.id = str(uuid.uuid4())
-        competitor_dict = competitor.model_dump()
-        competitors.append(competitor_dict) 
-        with open('./data/competitorsData.json', 'w') as f:
-            json.dump(competitors, f,indent=4)
-        return competitors
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="Error adding competitor"+str(e))
+def add_competitor(competitor: competitors_schema.Competitor,db: Session= Depends(get_db)):
+    new_competitor = competitors_service.create_competitor(db=db, competitor=competitor)
+    if new_competitor is not None:
+        raise HTTPException(status_code=200, detail="Competitor created successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error creating competitor")
 
 @router.delete("/competitors/{competitor_id}",tags=["competitors"])
-def delete_competitor(competitor_id: str):
-    for competitor in competitors:
-        if str(competitor["id"]) == competitor_id:
-            competitors.remove(competitor)
-            with open('./data/competitorsData.json', 'w') as f:
-                json.dump(competitors, f,indent=4)
-            return competitors
-    raise HTTPException(status_code=404, detail="competitor not found")
-
-@router.put("/competitors/{competitor_id}",tags=["competitors"])
-def update_competitor(competitor_id: str, competitor: Competitor):
-    for competitor in competitors:
-        if str(competitor["id"]) == competitor_id:
-            competitor = competitor
-            with open('./data/competitorsData.json', 'w') as f:
-                json.dump(competitors, f,indent=4)
-            return competitors
-    raise HTTPException(status_code=404, detail="competitor not found")
+def delete_competitor(competitor_id: str,db: Session= Depends(get_db)):
+    competitor = competitors_service.delete_competitor(db=db, competitor_id=competitor_id)
+    if competitor is not None:
+        raise HTTPException(status_code=200, detail="Competitor deleted successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error deleting competitor")
 
 # Post competition .gpx file path
+
 @router.post("/competitors/gpx",tags=["competitors"])
-def post_gpx_file(competitorGpx: CompetitorGpx):
-    for competitor in competitors:
-        if str(competitor["id"]) == competitorGpx.competitorId:
-            if competitorGpx.stageId not in competitor["currentStagesIds"]:
-                competitor["currentStagesIds"].append(competitorGpx.stageId)
-                with open('./data/competitorsData.json', 'w') as f:
-                    json.dump(competitors, f,indent=4)       
-            for stage in stages:
-                if str(stage["id"]) == competitorGpx.stageId:
-                    # logica para comparar waypoints y gpx file
-                    validations_i = Validations()
-                    route = competitorGpx.filePath.replace("\\", "/")
-                    validationResult = validations_i.validations(stage, route)
-                    return validationResult
-            raise HTTPException(status_code=400, detail="Error in gpx file validation")
-    raise HTTPException(status_code=404, detail="competitor not found")
+def post_gpx_file(competitorGpx: competitors_schema.CompetitorGpx,db: Session= Depends(get_db)):
+    result = competitors_service.load_competitor_gpx(db=db, competitorGpx=competitorGpx)
+    if result is not None:
+        return result
+    else:
+        raise HTTPException(status_code=500, detail="Error loading competitor gpx")
 

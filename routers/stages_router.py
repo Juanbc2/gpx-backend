@@ -42,7 +42,7 @@ def add_stage(stage: stages_schema.Stage,db : Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail="Error creating stage")
     
 @router.get("/stages/stages_by_event/{event_id}",tags=["stages"],response_model=list[stages_schema.Stage])
-def get_stages_by_event(event_id: str,db : Session = Depends(get_db)):
+def get_stages_by_event(event_id: int,db : Session = Depends(get_db)):
     stages = stages_service.get_stages_by_event(db=db, event_id=event_id)
     if stages is not None:
         return stages
