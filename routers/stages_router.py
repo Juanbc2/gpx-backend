@@ -1,74 +1,58 @@
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from typing import Optional
-import uuid
-import json
+from fastapi import APIRouter,Depends, HTTPException
+from database import models
+from schemas import stages_schema
+from database.database import SessionLocal, engine
+from sqlalchemy.orm import Session
+from services import stages_service
 
+models.Base.metadata.create_all(bind=engine)
 
 router = APIRouter()
-stages = []
-try:
-    with open('./data/stagesData.json', 'r') as f:
-        json_data = json.load(f)
-        if json_data:
-            stages = json_data
-except (FileNotFoundError, json.JSONDecodeError):
-    stages = []
 
-class Waypoint(BaseModel):
-    wpnumber: Optional[int] = None
-    latitude: str
-    longitude: str
-    type: Optional[str] = None
-    distance: float
-    speed: Optional[float] = None
-    penalization: Optional[str] = None
-    ratius: Optional[int] = None
-    neutralization: Optional[str] = None
-
-# stage model
-class Stage(BaseModel):
-    id: Optional[str] = None
-    eventId: str
-    categoriesIds: list[int]
-    details: str
-    stageDate: str
-    waypoints: list[Waypoint]
-
-
-@router.get("/stages",tags=["stages"])
-def get_stages():
+def get_db():
+    db = SessionLocal()
     try:
-        return stages
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="Error getting stages"+str(e))
+        yield db
+    finally:
+        db.close()
 
+
+@router.get("/stages",tags=["stages"],response_model=list[stages_schema.Stage])
+def get_stages(db : Session = Depends(get_db)):
+    stages = stages_service.get_stages(db=db)
+    if stages is not None:
+        return stages
+    else:
+        raise HTTPException(status_code=404, detail="stages not found")
+    
 @router.get("/stages/{stage_id}",tags=["stages"])
-def get_stage(stage_id: str):
-    for stage in stages:
-        if str(stage["id"]) == stage_id:
-            return stage
-    raise HTTPException(status_code=404, detail="Post not found")
-
+def get_stage(stage_id: str,db : Session = Depends(get_db)):
+    stage = stages_service.get_stage_by_id(db=db, stage_id=stage_id)
+    if stage is not None:
+        return stage
+    else:
+        raise HTTPException(status_code=404, detail="stage not found")
+    
 @router.post("/stages",tags=["stages"])
-def add_stage(stage: Stage):
-    try:
-        stage.id = str(uuid.uuid4())
-        stage_dict = stage.model_dump()
-        stages.append(stage_dict)
-        add_event_stage(stage.eventId, stage.id, stage.details)
-        with open('./data/stagesData.json', 'w') as f:
-            json.dump(stages, f,indent=4)
+def add_stage(stage: stages_schema.Stage,db : Session = Depends(get_db)):
+    new_stage = stages_service.create_stage(db=db, stage=stage)
+    if new_stage is not None:
+        raise HTTPException(status_code=200, detail="stage created successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error creating stage")
+    
+@router.get("/stages/stages_by_event/{event_id}",tags=["stages"],response_model=list[stages_schema.Stage])
+def get_stages_by_event(event_id: str,db : Session = Depends(get_db)):
+    stages = stages_service.get_stages_by_event(db=db, event_id=event_id)
+    if stages is not None:
         return stages
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="Error adding stage,"+str(e))
+    else:
+        raise HTTPException(status_code=404, detail="stages not found")
 
 @router.delete("/stages/{stage_id}",tags=["stages"])
-def delete_stage(stage_id: str):
-    for stage in stages:
-        if str(stage["id"]) == stage_id:
-            stages.remove(stage)
-            with open('./data/stagesData.json', 'w') as f:
-                json.dump(stages, f,indent=4)
-            return stages
-    raise HTTPException(status_code=404, detail="stage not found")
+def delete_stage(stage_id: str,db : Session = Depends(get_db)):
+    stage = stages_service.delete_stage_by_id(db=db, stage_id=stage_id)
+    if stage is not None:
+        raise HTTPException(status_code=200, detail="stage deleted successfully")
+    else:
+        raise HTTPException(status_code=404, detail="stage not found")
