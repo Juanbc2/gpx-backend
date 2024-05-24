@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import Optional
 import uuid
 import json
-from events import add_event_stage
+
 
 router = APIRouter()
 stages = []

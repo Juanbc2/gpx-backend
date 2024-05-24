@@ -1,12 +1,12 @@
 from fastapi import  FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import events
-import stages
-import competitors
-import login
+import routers.events_router as events
+import routers.stages_router as stages
+import routers.competitors_router as competitors
+import routers.users_router as users
 
 app = FastAPI( title='GPX API',description='Documentación de las API para DARIEN GPX ANALYZER')
-app.include_router(login.router)
+app.include_router(users.router)
 app.include_router(events.router)
 app.include_router(stages.router)
 app.include_router(competitors.router)

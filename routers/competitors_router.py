@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import Optional
 import uuid
 import json
-from validations import Validations
+from utils.validations import Validations
 
 router = APIRouter()
 competitors = []
