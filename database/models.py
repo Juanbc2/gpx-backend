@@ -1,8 +1,7 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-from schemas import stages_schema
 from .database import Base
-
+import json
 
 class Users(Base):
     __tablename__ = "users"
@@ -56,6 +55,8 @@ class Competitors(Base):
     name = Column(String)
     lastName = Column(String)
     number = Column(String)
+
+    vehicle = relationship("Vehicle", backref="competitors")
 
 
 class Vehicle(Base):

@@ -18,10 +18,10 @@ class Validations:
         self.radio = 0
         self.totalTime=0
 
-    def validations(self, file_path,rutagpx):
+    def validations(self, waypoints,rutagpx):
         print("Validations started")
         ##El file_Path es un String con el Json que retorna el Front
-        matrizCompleta = self.carga(file_path)
+        matrizCompleta = pd.DataFrame(waypoints)
         matrizCompleta['latitude'] = self.dms_to_dd(matrizCompleta['latitude'])
         matrizCompleta['longitude'] = self.dms_to_dd(matrizCompleta['longitude'])
         gpxCorredor = self.gpxUsuario(rutagpx)
@@ -50,15 +50,12 @@ class Validations:
         ruta_json = mRuta.to_json(orient="records")
         penalizacion_json = mPenalizacion.to_json(orient="records")
         my_dict = {
-            "tiempoCarrera": tiempoCarrera,
-            "ruta": json.loads(ruta_json),
-            "penalizacion": json.loads(penalizacion_json),
-            "total": total
+            "penaltieTime": tiempoCarrera,
+            "route": json.loads(ruta_json),
+            "penalties": json.loads(penalizacion_json),
+            "routeTime": total
         }
-
         json_data = json.dumps(my_dict)
-
-
         return (json_data)
 
 
@@ -92,19 +89,6 @@ class Validations:
                 result = (grad + (mins / 60)) * -1
             list.append(result)
         df = pd.DataFrame(list, columns=['latitude'])
-        return df
-
-
-    def carga(self, file_path):
-        data = file_path
-        waypoints_data = data["waypoints"]
-
-        # for item in data:
-        #     if "waypoints" in item:
-        #         waypoints_data.extend(item["waypoints"])
-
-
-        df = pd.DataFrame(waypoints_data)
         return df
 
     def gpxUsuario(self, ruta_archivo):

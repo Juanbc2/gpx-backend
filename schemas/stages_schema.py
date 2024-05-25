@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 
 class Waypoint(BaseModel):
     wpnumber: Optional[int] = None
@@ -19,8 +19,8 @@ class Stage(BaseModel):
     eventId : int
     details: str
     stageDate: str 
-    waypoints: list[Waypoint]
-    categoriesIds: list[int]
+    waypoints: List[Waypoint]
+    categoriesIds: List[int]
 
 class StageWithoutWaypoints(BaseModel):
     id: Optional[int] = None

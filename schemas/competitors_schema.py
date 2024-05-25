@@ -9,14 +9,8 @@ class Competitor(BaseModel):
     identification: str
 
 class CompetitorGpx(BaseModel):
-    vehicleId: str
+    vehicleId: int
     filePath: str
-    stageId: str
-
-class CompetitorGpxResult(BaseModel):
-    penaltieTime: str
-    routeTime: str
-    penalties: list[str]
-    route: list[str]
+    stageId: int
 
 

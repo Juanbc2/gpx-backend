@@ -58,4 +58,11 @@ def post_gpx_file(competitorGpx: competitors_schema.CompetitorGpx,db: Session= D
         return result
     else:
         raise HTTPException(status_code=500, detail="Error loading competitor gpx")
-
+    
+@router.get("/competitors/results/",tags=["competitors"])
+def get_competitor_results(db: Session= Depends(get_db)):
+    results = competitors_service.get_all_competitors_results(db=db)
+    if results is not None:
+        return results
+    else:
+        raise HTTPException(status_code=404, detail="Competitor not found")

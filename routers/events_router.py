@@ -1,6 +1,6 @@
 from fastapi import APIRouter,Depends, HTTPException
 from database import models
-from schemas import events_schema,stages_schema
+from schemas import events_schema
 from database.database import SessionLocal, engine
 from sqlalchemy.orm import Session
 from services import events_service

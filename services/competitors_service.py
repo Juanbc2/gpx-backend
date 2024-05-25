@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from database import models
 from services import stages_service
 from utils.validations import Validations
+import json
 
 def get_competitors(db: Session):
     return db.query(models.Competitors).all()
@@ -22,36 +23,45 @@ def delete_competitor(db: Session, competitor_id: str):
     db.commit()
     return competitor
 
+def get_competitor_results(db: Session, competitor_id: str, stage_id: int):
+    results = db.query(models.StageCompetitorResults).filter(models.StageCompetitorResults.vehicleId == competitor_id, models.StageCompetitorResults.stageId == stage_id).first()
+    return results
 
-def create_stage_competitor_result(db: Session, stageCompetitorResult: competitors_schema.CompetitorGpxResult, stageId: int, vehicleId: int):
+def get_all_competitors_results(db: Session):
+    return db.query(models.StageCompetitorResults).all()
+
+
+def create_stage_competitor_result(db: Session, stageCompetitorResult: json, stageId: int, vehicleId: int):
+    result = json.loads(stageCompetitorResult)
+    save = {
+            "penaltieTime": result["penaltieTime"],
+            "routeTime": result["routeTime"],
+            "penalties": result["penalties"],
+            "route": result["route"]
+        }
     new_stage_competitor_result = models.StageCompetitorResults(
-        stageId,
-        vehicleId,
-        routeTime= stageCompetitorResult.routeTime,
-        penaltieTime= stageCompetitorResult.penaltieTime,
-        penalties= stageCompetitorResult.penalties,
-        route= stageCompetitorResult.route,
+        stageId = stageId,
+        vehicleId = vehicleId,
+        routeTime= save["routeTime"],
+        penaltieTime= save["penaltieTime"],
+        penalties= json.dumps(save["penalties"]),
+        route= json.dumps(save["route"]),
     )
     db.add(new_stage_competitor_result)
     db.commit()
 
 
+
 def load_competitor_gpx(db: Session, competitorGpx: competitors_schema.CompetitorGpx):
-    stage = stages_service.get_stage_by_id(db, competitorGpx.stageId)
-    if stage is None:
-        return "Stage not found"
+    waypoints = stages_service.get_stage_waypoints(db, competitorGpx.stageId)
+    if waypoints is None:
+        return "Waypoints not found"
     validations_i = Validations()
     route = competitorGpx.filePath.replace("\\", "/")
-    validationResult = validations_i.validations(stage, route)
+    validationResult = validations_i.validations(waypoints,route)
     if validationResult is not None:
-        result = {
-            "penaltieTime": validationResult.tiempoCarrera,
-            "routeTime": validationResult.total,
-            "penalties": validationResult.penalizacion,
-            "route": validationResult.ruta
-        }
-        create_stage_competitor_result(db, result, stage.id, competitorGpx.vehicleId)
-        return result
+        create_stage_competitor_result(db, validationResult,competitorGpx.stageId, competitorGpx.vehicleId)
+        return validationResult
     else:
         return None
 
