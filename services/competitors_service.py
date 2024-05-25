@@ -17,6 +17,15 @@ def create_competitor(db: Session, competitor: competitors_schema.Competitor):
     db.commit()
     return new_competitor
 
+def bulk_create_competitors(db: Session, competitors: list[competitors_schema.Competitor]):
+    new_competitors = []
+    for competitor in competitors:
+        new_competitor = models.Competitors(name=competitor.name, lastName=competitor.lastName, number=competitor.number, identification=competitor.identification)   
+        new_competitors.append(new_competitor)
+    db.add_all(new_competitors)
+    db.commit()
+    return new_competitors
+
 def delete_competitor(db: Session, competitor_id: str):
     competitor = db.query(models.Competitors).filter(models.Competitors.id == competitor_id).first()
     db.delete(competitor)

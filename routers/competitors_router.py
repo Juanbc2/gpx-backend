@@ -40,6 +40,14 @@ def add_competitor(competitor: competitors_schema.Competitor,db: Session= Depend
         raise HTTPException(status_code=200, detail="Competitor created successfully")
     else:
         raise HTTPException(status_code=500, detail="Error creating competitor")
+    
+@router.post("/competitors/bulk",tags=["competitors"])
+def add_competitors(competitors: list[competitors_schema.Competitor],db: Session= Depends(get_db)):
+    new_competitors = competitors_service.bulk_create_competitors(db=db, competitors=competitors)
+    if new_competitors is not None:
+        raise HTTPException(status_code=200, detail="Competitors created successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error creating competitors")
 
 @router.delete("/competitors/{competitor_id}",tags=["competitors"])
 def delete_competitor(competitor_id: str,db: Session= Depends(get_db)):
@@ -67,4 +75,3 @@ def get_competitor_results( vehicle_id: str, stage_id: int,db: Session= Depends(
     else:
         raise HTTPException(status_code=404, detail="Results not found")
     
-
