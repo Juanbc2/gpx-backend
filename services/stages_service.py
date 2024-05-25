@@ -34,8 +34,8 @@ def create_stage(db: Session, stage: stages_schema.Stage):
 def get_stages_by_event(db: Session, event_id: int):
     stages = db.query(models.Stages).filter(models.Stages.eventId == event_id).all()
     for stage in stages:
-        stage.waypoints = json.loads(stage.waypoints)
-        stage.categoriesIds = json.loads(stage.categoriesIds)
+        stage.waypoints = json.loads(str(stage.waypoints))
+        stage.categoriesIds = json.loads(str(stage.categoriesIds))
     return stages
 
 def delete_stage_by_id(db: Session, stage_id: int):

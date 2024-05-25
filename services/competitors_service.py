@@ -23,15 +23,12 @@ def delete_competitor(db: Session, competitor_id: str):
     db.commit()
     return competitor
 
-def get_competitor_results(db: Session, competitor_id: str, stage_id: int):
-    results = db.query(models.StageCompetitorResults).filter(models.StageCompetitorResults.vehicleId == competitor_id, models.StageCompetitorResults.stageId == stage_id).first()
+def get_competitor_results(db: Session, vehicle_id: str, stage_id: int):
+    results = db.query(models.StageCompetitorResults).filter(models.StageCompetitorResults.vehicleId == vehicle_id, models.StageCompetitorResults.stageId == stage_id).first()
     return results
 
-def get_all_competitors_results(db: Session):
-    return db.query(models.StageCompetitorResults).all()
 
-
-def create_stage_competitor_result(db: Session, stageCompetitorResult: json, stageId: int, vehicleId: int):
+def create_stage_competitor_result(db: Session, stageCompetitorResult: str, stageId: int, vehicleId: int):
     result = json.loads(stageCompetitorResult)
     save = {
             "penaltieTime": result["penaltieTime"],
@@ -39,15 +36,24 @@ def create_stage_competitor_result(db: Session, stageCompetitorResult: json, sta
             "penalties": result["penalties"],
             "route": result["route"]
         }
-    new_stage_competitor_result = models.StageCompetitorResults(
-        stageId = stageId,
-        vehicleId = vehicleId,
-        routeTime= save["routeTime"],
-        penaltieTime= save["penaltieTime"],
-        penalties= json.dumps(save["penalties"]),
-        route= json.dumps(save["route"]),
-    )
-    db.add(new_stage_competitor_result)
+    existing_result = db.query(models.StageCompetitorResults).filter_by(stageId=stageId, vehicleId=vehicleId).first()
+    if existing_result:
+        # Actualiza el registro existente
+        existing_result.routeTime = save["routeTime"]
+        existing_result.penaltieTime = save["penaltieTime"]
+        existing_result.penalties = json.dumps(save["penalties"])
+        existing_result.route = json.dumps(save["route"])
+    else:
+        # Crea un nuevo registro
+        new_stage_competitor_result = models.StageCompetitorResults(
+            stageId = stageId,
+            vehicleId = vehicleId,
+            routeTime= save["routeTime"],
+            penaltieTime= save["penaltieTime"],
+            penalties= json.dumps(save["penalties"]),
+            route= json.dumps(save["route"]),
+        )
+        db.add(new_stage_competitor_result)
     db.commit()
 
 
