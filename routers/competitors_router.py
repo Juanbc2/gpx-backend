@@ -75,3 +75,10 @@ def get_competitor_results( vehicle_id: str, stage_id: int,db: Session= Depends(
     else:
         raise HTTPException(status_code=404, detail="Results not found")
     
+@router.put("/competitors/{competitor_id}",tags=["competitors"])
+def update_competitor(competitor_id: str, competitor: competitors_schema.Competitor,db: Session= Depends(get_db)):
+    updated_competitor = competitors_service.update_competitor(db=db, competitor_id=competitor_id, competitor=competitor)
+    if updated_competitor is not None:
+        raise HTTPException(status_code=200, detail="Competitor updated successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error updating competitor")

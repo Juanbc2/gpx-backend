@@ -37,3 +37,16 @@ def delete_event_by_id(db: Session, event_id: int):
         db.commit()
         return True
     return False
+
+def update_event_by_id(db: Session, event_id: int, event: events_schema.Event):
+    event_to_update = db.query(models.Events).filter(models.Events.id == event_id).first()
+    if event_to_update is not None:
+        event_to_update.name = event.name
+        event_to_update.location = event.location
+        event_to_update.details = event.details
+        event_to_update.eventStartDate = event.eventStartDate
+        event_to_update.eventEndDate = event.eventEndDate
+        event_to_update.categoriesIds = json.dumps(event.categoriesIds)
+        db.commit()
+        return True
+    return False

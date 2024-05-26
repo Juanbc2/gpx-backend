@@ -298,7 +298,7 @@ class Validations:
                 elif (fila1['type']=='FZ'):
                     distancia=fila1['distance']-filaanterior
                     gtf = MMU['time']
-
+                    print("tiempo",)
                     speedProm=self.speed(distancia,gti,gtf)
 
                 if self.pena:

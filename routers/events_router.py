@@ -58,3 +58,11 @@ def delete_event(event_id: int,db: Session= Depends(get_db)):
         raise HTTPException(status_code=200, detail="Event deleted successfully")
     else:
         raise HTTPException(status_code=500, detail="Error deleting event")
+    
+@router.put("/events/{event_id}",tags=["events"])
+def update_event(event_id: int, event: events_schema.Event,db: Session= Depends(get_db)):
+    updated_event = events_service.update_event_by_id(db=db, event_id=event_id, event=event)
+    if updated_event is not None:
+        raise HTTPException(status_code=200, detail="Event updated successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error updating event")

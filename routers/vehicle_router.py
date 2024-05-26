@@ -48,4 +48,22 @@ def get_vehicle_by_competitor(competitor_id: str,db: Session= Depends(get_db)):
     else:
         raise HTTPException(status_code=404, detail="Vehicle not found")
 
+@router.put("/vehicles/{vehicle_id}",tags=["vehicles"])
+def update_vehicle(vehicle_id: str, vehicle: vehicle_schema.Vehicle,db: Session= Depends(get_db)):
+    updated_vehicle = vehicle_service.update_vehicle_by_id(db=db, vehicle_id=vehicle_id, vehicle=vehicle)
+    if updated_vehicle:
+        raise HTTPException(status_code=200, detail="Vehicle updated successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error updating vehicle")
+    
+@router.delete("/vehicles/{vehicle_id}",tags=["vehicles"])
+def delete_vehicle(vehicle_id: str,db: Session= Depends(get_db)):
+    vehicle = vehicle_service.delete_vehicle(db=db, vehicle_id=vehicle_id)
+    if vehicle is not None:
+        raise HTTPException(status_code=200, detail="Vehicle deleted successfully")
+    else:
+        raise HTTPException(status_code=500, detail="Error deleting vehicle")
+
+
+
 

@@ -38,6 +38,16 @@ def delete_vehicle(db: Session, vehicle_id: str):
 
 def get_vehicle_by_competitor(db: Session, competitor_id: str):
     return db.query(models.Vehicle).filter(models.Vehicle.competitorId == competitor_id).first()
-    
 
+def update_vehicle_by_id(db: Session, vehicle_id: str, vehicle: vehicle_schema.Vehicle):
+    vehicle_to_update = db.query(models.Vehicle).filter(models.Vehicle.id == vehicle_id).first()
+    if vehicle_to_update is not None:
+        vehicle_to_update.brand = vehicle.brand
+        vehicle_to_update.model = vehicle.model
+        vehicle_to_update.plate = vehicle.plate
+        vehicle_to_update.securePolicy = vehicle.securePolicy
+        vehicle_to_update.competitorId = vehicle.competitorId
+        db.commit()
+        return True
+    return False
 

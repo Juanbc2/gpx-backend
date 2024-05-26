@@ -46,17 +46,15 @@ def delete_stage_by_id(db: Session, stage_id: int):
         return True
     return False
 
-def update_stage(db: Session, stage: stages_schema.Stage):
-    stage_db = db.query(models.Stages).filter(models.Stages.id == stage.id).first()
-    if stage_db is not None:
-        waypoints_json = json.dumps([waypoint.model_dump() for waypoint in stage.waypoints])
-        categories_str = json.dumps(stage.categoriesIds)    
-        stage_db.name = stage.name
-        stage_db.eventId = stage.eventId
-        stage_db.details = stage.details
-        stage_db.stageDate = stage.stageDate
-        stage_db.waypoints = waypoints_json
-        stage_db.categoriesIds = categories_str
+def update_stage_by_id(db: Session, stage_id: int, stage: stages_schema.Stage):
+    stage_to_update = db.query(models.Stages).filter(models.Stages.id == stage_id).first()
+    if stage_to_update is not None:
+        stage_to_update.name = stage.name
+        stage_to_update.eventId = stage.eventId
+        stage_to_update.details = stage.details
+        stage_to_update.stageDate = stage.stageDate
+        stage_to_update.waypoints = json.dumps([waypoint.model_dump() for waypoint in stage.waypoints])
+        stage_to_update.categoriesIds = json.dumps(stage.categoriesIds)
         db.commit()
         return True
     return False

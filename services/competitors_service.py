@@ -79,6 +79,17 @@ def load_competitor_gpx(db: Session, competitorGpx: competitors_schema.Competito
         return validationResult
     else:
         return None
+    
+def update_competitor(db: Session, competitor_id: str, competitor: competitors_schema.Competitor):
+    competitor_to_update = db.query(models.Competitors).filter(models.Competitors.id == competitor_id).first()
+    if competitor_to_update is not None:
+        competitor_to_update.name = competitor.name
+        competitor_to_update.lastName = competitor.lastName
+        competitor_to_update.number = competitor.number
+        competitor_to_update.identification = competitor.identification
+        db.commit()
+        return True
+    return False
 
 
 

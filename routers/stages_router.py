@@ -57,9 +57,9 @@ def delete_stage(stage_id: str,db : Session = Depends(get_db)):
     else:
         raise HTTPException(status_code=404, detail="stage not found")
     
-@router.put("/stages",tags=["stages"])
-def update_stage(stage: stages_schema.Stage,db : Session = Depends(get_db)):
-    stage = stages_service.update_stage(db=db, stage=stage)
+@router.put("/stages/{stage_id}",tags=["stages"])
+def update_stage(stage_id: str,stage: stages_schema.Stage,db : Session = Depends(get_db)):
+    stage = stages_service.update_stage_by_id(db=db, stage_id=stage_id, stage=stage)
     if stage is not None:
         raise HTTPException(status_code=200, detail="stage updated successfully")
     else:

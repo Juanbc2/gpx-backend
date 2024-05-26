@@ -19,7 +19,7 @@ class Stage(BaseModel):
     eventId : int
     details: str
     stageDate: str 
-    waypoints: List[Waypoint]
+    waypoints: Optional[List[Waypoint]] = None
     categoriesIds: List[int]
 
 class StageWithoutWaypoints(BaseModel):
