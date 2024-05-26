@@ -1,13 +1,14 @@
 from schemas import users_schema
 from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
-from jose import jwt
+from jose import jwt, JWTError
 import bcrypt
 from database import models
+from datetime import datetime, timezone
 
 SECRET_KEY = "d34391818363cfbd2545e405e4659c16fe2e43aefa160945bdc993353381e4e1"
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 3600
+ACCESS_TOKEN_EXPIRE_MINUTES = 1
 
 def create_access_token(data: dict):
     to_encode = data.copy()
@@ -32,4 +33,31 @@ def login(db: Session,user: users_schema.UserLogin):
         return False
     access_token = create_access_token(data={"sub": user.username})
     return {"access_token": access_token, "token_type": "bearer"}
+
+def is_any_user_created(db: Session):
+    return db.query(models.Users).first() is not None
+
+
+def is_token_expired(token: str):
+    try:
+        # Decodificar el token
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        
+        # Obtener la fecha de expiración del token
+        expire = payload.get('exp')
+        
+        # Si no hay fecha de expiración, el token no está expirado
+        if expire is None:
+            return False
+        
+        # Comprobar si la fecha de expiración es anterior a la fecha actual
+        if datetime.now(timezone.utc) > datetime.fromtimestamp(expire, timezone.utc):
+            return True
+        else:
+            return False
+    except JWTError:
+        # Si hay un error al decodificar el token, asumimos que está expirado
+        return True
+
+
 

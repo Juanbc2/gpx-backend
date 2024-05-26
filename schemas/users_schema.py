@@ -8,3 +8,5 @@ class UserRegister(BaseModel):
     username: str
     hashed_password: str
 
+class Token(BaseModel):
+    token: str

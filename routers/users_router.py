@@ -33,3 +33,14 @@ def login(user: users_schema.UserLogin,db: Session= Depends(get_db)):
         return token
     else:
         raise HTTPException(status_code=401, detail="Invalid credentials")
+    
+@router.get("/users/masterCreated",tags=["users"])
+def is_any_user_created(db: Session= Depends(get_db)):
+    return users_service.is_any_user_created(db=db)
+
+
+@router.post("/users/verifyToken",tags=["users"])
+def verify_token(token: users_schema.Token):
+    return users_service.is_token_expired(token=token.token)
+
+
