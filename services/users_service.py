@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 
 SECRET_KEY = "d34391818363cfbd2545e405e4659c16fe2e43aefa160945bdc993353381e4e1"
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 1
+ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 def create_access_token(data: dict):
     to_encode = data.copy()
