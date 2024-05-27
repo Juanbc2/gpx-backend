@@ -1,11 +1,14 @@
-from fastapi import  FastAPI
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import routers.events_router as events
-import routers.stages_router as stages
-import routers.competitors_router as competitors
-import routers.users_router as users
-import routers.vehicle_router as vehicles
-import routers.categories_router as categories
+from routers import events_router as events
+from routers import users_router as users
+from routers import stages_router as stages
+from routers import competitors_router as competitors
+from routers import categories_router as categories
+from routers import vehicles_router as vehicles
+from uvicorn import run
+
+import multiprocessing
 
 app = FastAPI( title='GPX API',description='Documentación de las API para DARIEN GPX ANALYZER')
 app.include_router(users.router)
@@ -27,3 +30,7 @@ app.add_middleware(
    allow_methods=["*"],
    allow_headers=["*"],
 )
+
+if __name__ == '__main__':
+    multiprocessing.freeze_support()  # For Windows support
+    run(app, host="0.0.0.0", port=8000, reload=False, workers=1)
