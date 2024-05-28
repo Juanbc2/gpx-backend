@@ -1,19 +1,19 @@
 from schemas import vehicle_schema
 from sqlalchemy.orm import Session
 from database import models
-from services import competitors_service
+from models import competitors_model
 
 def get_vehicles(db: Session):
     vehicles = db.query(models.Vehicle).all()
     for vehicle in vehicles:
-        vehicle.competitor = competitors_service.get_competitor_by_id(db, vehicle.competitorId)
+        vehicle.competitor = competitors_model.get_competitor_by_id(db, vehicle.competitorId)
     return vehicles
 
 
 def get_vehicle_by_id(db: Session, vehicle_id: str):
     vehicle = db.query(models.Vehicle).filter(models.Vehicle.id == vehicle_id).first()
     if vehicle is not None:
-        vehicle.competitor = competitors_service.get_competitor_by_id(db, vehicle.competitorId)
+        vehicle.competitor = competitors_model.get_competitor_by_id(db, vehicle.competitorId)
     return vehicle
     
 

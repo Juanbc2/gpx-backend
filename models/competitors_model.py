@@ -1,7 +1,7 @@
 from schemas import competitors_schema
 from sqlalchemy.orm import Session
 from database import models
-from services import stages_service
+from models import stages_model
 from utils.validations import Validations
 import json
 
@@ -68,7 +68,7 @@ def create_stage_competitor_result(db: Session, stageCompetitorResult: str, stag
 
 
 def load_competitor_gpx(db: Session, competitorGpx: competitors_schema.CompetitorGpx):
-    waypoints = stages_service.get_stage_waypoints(db, competitorGpx.stageId)
+    waypoints = stages_model.get_stage_waypoints(db, competitorGpx.stageId)
     if waypoints is None:
         return "Waypoints not found"
     validations_i = Validations()

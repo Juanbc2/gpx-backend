@@ -3,7 +3,7 @@ from database import models
 from schemas import events_schema
 from database.database import SessionLocal, engine
 from sqlalchemy.orm import Session
-from services import events_service
+from models import events_model
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -19,7 +19,7 @@ def get_db():
 
 @router.get("/events",tags=["events"])
 def get_events(db: Session= Depends(get_db)):
-    events = events_service.get_events(db=db)
+    events = events_model.get_events(db=db)
     if events is not None:
         return events
     else:
@@ -29,7 +29,7 @@ def get_events(db: Session= Depends(get_db)):
 
 @router.get("/events/{event_id}",tags=["events"])
 def get_event(event_id: int,db: Session= Depends(get_db)):
-    event = events_service.get_event_by_id(db=db, event_id=event_id)
+    event = events_model.get_event_by_id(db=db, event_id=event_id)
     if event is not None:
         return event
     else:
@@ -37,7 +37,7 @@ def get_event(event_id: int,db: Session= Depends(get_db)):
     
 @router.get("/events/stages/",tags=["events"], response_model=list[events_schema.EventWithStages])
 def get_events_with_stages(db: Session= Depends(get_db)):
-    events = events_service.get_events_with_stages(db=db)
+    events = events_model.get_events_with_stages(db=db)
     if events is not None:
         return events
     else:
@@ -45,7 +45,7 @@ def get_events_with_stages(db: Session= Depends(get_db)):
 
 @router.post("/events",tags=["events"])
 def add_event(event: events_schema.Event,db: Session= Depends(get_db)):
-    new_event = events_service.create_event(db=db, event=event)
+    new_event = events_model.create_event(db=db, event=event)
     if new_event is not None:
         raise HTTPException(status_code=200, detail="Event created successfully")
     else:
@@ -53,7 +53,7 @@ def add_event(event: events_schema.Event,db: Session= Depends(get_db)):
     
 @router.delete("/events/{event_id}",tags=["events"])
 def delete_event(event_id: int,db: Session= Depends(get_db)):
-    event = events_service.delete_event_by_id(db=db, event_id=event_id)
+    event = events_model.delete_event_by_id(db=db, event_id=event_id)
     if event is not None:
         raise HTTPException(status_code=200, detail="Event deleted successfully")
     else:
@@ -61,7 +61,7 @@ def delete_event(event_id: int,db: Session= Depends(get_db)):
     
 @router.put("/events/{event_id}",tags=["events"])
 def update_event(event_id: int, event: events_schema.Event,db: Session= Depends(get_db)):
-    updated_event = events_service.update_event_by_id(db=db, event_id=event_id, event=event)
+    updated_event = events_model.update_event_by_id(db=db, event_id=event_id, event=event)
     if updated_event is not None:
         raise HTTPException(status_code=200, detail="Event updated successfully")
     else:

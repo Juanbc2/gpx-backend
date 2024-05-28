@@ -3,7 +3,7 @@ from database import models
 from schemas import categories_schema
 from database.database import SessionLocal, engine
 from sqlalchemy.orm import Session
-from services import categories_service
+from models import categories_model
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -18,7 +18,7 @@ def get_db():
 
 @router.get("/categories",tags=["categories"], response_model=list[categories_schema.Category])
 def get_categories(db: Session= Depends(get_db)):
-    categories = categories_service.get_categories(db=db)
+    categories = categories_model.get_categories(db=db)
     if categories is not None:
         return categories
     else:
@@ -26,7 +26,7 @@ def get_categories(db: Session= Depends(get_db)):
     
 @router.get("/categories/{category_id}",tags=["categories"], response_model=categories_schema.Category)
 def get_category(category_id: str,db: Session= Depends(get_db)):
-    category = categories_service.get_category_by_id(db=db, category_id=category_id)
+    category = categories_model.get_category_by_id(db=db, category_id=category_id)
     if category is not None:
         return category
     else:
@@ -34,7 +34,7 @@ def get_category(category_id: str,db: Session= Depends(get_db)):
     
 @router.post("/categories",tags=["categories"])
 def add_category(category: categories_schema.Category,db: Session= Depends(get_db)):
-    new_category = categories_service.create_category(db=db, category=category)
+    new_category = categories_model.create_category(db=db, category=category)
     if new_category is not None:
         raise HTTPException(status_code=200, detail="Category created successfully")
     else:
@@ -42,7 +42,7 @@ def add_category(category: categories_schema.Category,db: Session= Depends(get_d
 
 @router.delete("/categories/{category_id}",tags=["categories"])
 def delete_category(category_id: str,db: Session= Depends(get_db)):
-    category = categories_service.delete_category(db=db, category_id=category_id)
+    category = categories_model.delete_category(db=db, category_id=category_id)
     if category is not None:
         raise HTTPException(status_code=200, detail="Category deleted successfully")
     else:
@@ -50,7 +50,7 @@ def delete_category(category_id: str,db: Session= Depends(get_db)):
     
 @router.put("/categories/{category_id}",tags=["categories"])
 def update_category(category_id: str, category: categories_schema.Category,db: Session= Depends(get_db)):
-    category = categories_service.update_category(db=db, category_id=category_id, category=category)
+    category = categories_model.update_category(db=db, category_id=category_id, category=category)
     if category is not None:
         raise HTTPException(status_code=200, detail="Category updated successfully")
     else:
