@@ -2,7 +2,7 @@ from schemas import competitors_schema
 from sqlalchemy.orm import Session
 from database import models
 from models import stages_model
-from utils.validations import Validations
+from services.validations import Validations
 import json
 
 def get_competitors(db: Session):

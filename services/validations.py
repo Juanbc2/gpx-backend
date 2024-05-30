@@ -150,7 +150,6 @@ class Validations:
 
         fecha_hora1 = datetime.fromisoformat(fecha_hora_str1.replace('Z', '+00:00'))
         fecha_hora2 = datetime.fromisoformat(fecha_hora_str2.replace('Z', '+00:00'))
-
         diferencia = fecha_hora2 - fecha_hora1
 
         return (diferencia.total_seconds())
@@ -161,8 +160,8 @@ class Validations:
             if i < self.progress:
                 continue
             tupla2 = (fila2['lat'], fila2['lon'])
-            redondeado_tupla = tuple(round(float(coord), 3) for coord in tupla)
-            redondeado_tupla2 = tuple(round(float(coord), 3) for coord in tupla2)
+            redondeado_tupla = tuple(round(float(coord), 4) for coord in tupla)
+            redondeado_tupla2 = tuple(round(float(coord), 4) for coord in tupla2)
 
 
             if (redondeado_tupla == redondeado_tupla2 and (i-self.progress)<len(dataUser)/20):
@@ -274,8 +273,8 @@ class Validations:
                 continue
 
 
-            self.row.extend([fila1['wpnumber'],round(fila1['latitude'], 3), round(fila1['longitude'], 3)])
-            self.point.extend([fila1['wpnumber'],round(fila1['latitude'], 3), round(fila1['longitude'], 3)])
+            self.row.extend([fila1['wpnumber'],round(fila1['latitude'], 4), round(fila1['longitude'], 4)])
+            self.point.extend([fila1['wpnumber'],round(fila1['latitude'], 4), round(fila1['longitude'], 4)])
 
             MMU= self.match(punto1, dataUser, fila1['ratius'], fila1['penalization'])
 
@@ -287,17 +286,19 @@ class Validations:
                 final = MMU['time']
 
                 punto2=(MMU['lat'],MMU['lon'])
-                self.row.extend([round(float(MMU['lat']), 3), round(float(MMU['lon']), 3)])
-                self.point.extend([round(float(MMU['lat']), 3), round(float(MMU['lon']), 3),int(fila1['ratius'])])
+                self.row.extend([round(float(MMU['lat']), 4), round(float(MMU['lon']), 4)])
+                self.point.extend([round(float(MMU['lat']), 4), round(float(MMU['lon']), 4),int(fila1['ratius'])])
 
                 if(fila1['type']=='N'):
                     self.neutral(punto1,dataUser,fila1['ratius'], int(datetime.strptime(fila1['neutralization'],'%H:%M:%S').minute))
                 if (fila1['type']=='DZ'):
                     filaanterior=fila1['distance']
                     gti=MMU['time']
+                    
                 elif (fila1['type']=='FZ'):
                     distancia=fila1['distance']-filaanterior
                     gtf = MMU['time']
+                    
                     print("tiempo",)
                     speedProm=self.speed(distancia,gti,gtf)
 
